@@ -1,0 +1,183 @@
+MAIN PAGE
+
+Hamburger (Mobile) / Nav Bar
+    About (Home)
+    Game Play
+
+Header
+    Logo
+
+Content
+    About
+    Worm Food Types (Mobile Only)
+    Action Button: 'Play Now' --> Game Play
+
+----------------------------------------------------
+
+GAME PLAY
+
+**Constants** (for use throughout game, and adjustable on the backend)
+    GRID_SIZE
+    STARTING_WORM_LENGTH
+    STARTING_GLOW_AREA
+    STARTING_SPEED
+    STARTING_SPEED_CHANGE_INCREMENT
+    STARTING_NUMBER_OF_FOOD
+    POINTS_FOR_LEVEL_UP
+
+    DIRECTION_CHANGE
+        up
+        right
+        left
+        down
+
+    FOOD (with associated symbols, point values -- set these via Class construction?)
+        Small Food
+        Large Food
+        Poison!
+        Brighter
+        Darker
+        Faster
+        Slower
+
+
+**Functions - Initialize Game**
+
+    init()
+        Set High Score to 0
+        resetStats()
+        renderGrid()
+
+    resetStats()
+        Set Current Score to 0
+        Set Timer to 00:00
+        Set Level to 1
+    
+    initWorm()
+        Get random coordinates for worm head in left half of grid, without worm tail going past edge
+        Establish worm head at random coordinates
+        Set initial worm direction to 'right'
+        Set initial worm speed to STARTING_SPEED
+        Set initial glow area to STARTING_GLOW_AREA
+        Establish worm tail as empty array
+        Populate worm body with coordinates based on STARTING_WORM_LENGTH
+
+**Functions - (Re)Start Game**
+
+    startGame()
+        resetStats()
+        initWorm()
+        renderWorm()
+        renderFood()
+        moveWorm()
+        runTimer()
+    
+    runTimer()
+        Set interval of 1 second
+        Increment timer seconds
+        If seconds reach 60, increment timer minutes and reset seconds to 0
+
+
+**Functions - Render**
+
+    renderGrid()
+            Get rows and columns from GRID_SIZE
+            Generate divs
+            Assign all divs ids with coordinates
+            Initialize innerHTML of all divs to ''
+            Append divs to gridEl
+    
+    renderWorm()
+        renderWormHead()
+        renderWormTail()
+
+    renderWormHead()
+        Apply worm head CSS class to grid square at worm head coordinates
+        renderGlow()
+
+    renderGlow()
+        Remove existing glow
+        getAdjacentSquares(wormhead coordinates)
+        For each adjacent square (except worm head and worm tail), apply glow CSS class
+
+    getAdjacentSquares()
+        Set empty array
+        Loop through adjacent squares offset from worm head based on STARTING_GLOW_AREA
+        Push adjacent squares into array
+
+    renderWormTail()
+        Apply worm tail CSS class to grid squares in worm tail array
+
+    renderFood()
+        Get random position for food (that isn't already occupied)
+        Select random food type
+        Populate innerText of div at food position with symbol from food type
+
+
+**Functions - Game Play**
+
+    moveWorm()
+        Clear interval
+        Set new interval based on worm speed
+        Calculate new worm head position based on direction
+
+        Check if new worm head position is outside grid
+            if yes, gameOver() and return
+
+        Check if new worm head position is eating its own tail
+            if yes, gameOver() and return
+
+        Check if new worm head position is eating food
+            if yes, eatFood()
+
+        Otherwise, move normally
+            Pop last segment from worm tail array
+            Unshift old worm head position to worm tail array
+            Update worm head with new position
+            renderWorm()
+
+    eatFood()
+        Check symbol of food eaten
+            Apply points earned/lost -- updateCurrentScore()
+            Apply effects of food, if any
+        Clear innerText of div
+        renderFood()
+        Add new segment to worm tail array
+    
+    updateCurrentScore()
+        Add points earned/lost to Score
+        If current score is > high score, updateHighScore()
+        If current score is > current level * POINTS_FOR_LEVEL_UP, levelUp()
+    
+    updateHighScore()
+        Set high score to current score
+
+    levelUp()
+        Increment level
+        Flash level up message
+        Adjust speed increment according to level (decrease increment with every level up)
+        Subtract new speed increment from worm speed
+    
+    gameOver()
+        Clear all intervals
+        renderGrid()
+        Pop-up window to Play Again or Quit Game
+
+
+
+**Functions - Event Listeners**
+
+    changeDirection()
+        Check if direction change is valid (no 180-degree turns)
+        Update direction
+
+    pauseGame()
+        If game is in play
+            Clear all intervals
+            Change pause button innerText to 'Resume'
+        If game is paused
+            moveWorm()
+            runTimer()
+            Change pause button innerText to 'Pause'
+
+    
