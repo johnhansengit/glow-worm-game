@@ -165,7 +165,7 @@ GAME PLAY
 
 
 
-**Functions - Event Listeners**
+**Functions - Event Handlers**
 
     changeDirection()
         Check if direction change is valid (no 180-degree turns)
