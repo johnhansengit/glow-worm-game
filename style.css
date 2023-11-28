@@ -3,5 +3,93 @@
 }
 
 body {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    width: auto;
+    background-color: #323232;
+    color: #ddd;
+    font-family: 'Tektur', sans-serif;
 }
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 3vmin auto 0;
+}
+
+#logo {
+    height: 30vmin;
+    width: 30vmin;
+}
+
+/* Navigation */
+
+#hamburger-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3vmin;
+    background-color: #323232;
+    color: #ddd;
+    padding: 2vmin;
+    font-size: 10vmin;
+ }
+
+ #hamburger-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 18.5vmin;
+    right: 3vmin;
+ }
+
+ #hamburger-nav-links a {
+    display: block;
+    text-align: right;
+    font-size: 4.5vmin;
+    color: #ddd;
+    text-decoration: none;
+ }
+
+ /* MAIN CONTENT*/
+
+ main {
+    margin-top: 3vmin;
+    height: 70vh;
+    width: 80vw;
+    border: 1px solid #ddd;
+    border-radius: 1.5vmin;
+    padding: 3vmin;
+    box-shadow: 0 0 10vmin 5vmin rgba(161, 249, 127, 0.5); 
+    font-size: 3vmin;
+ }
+
+ #about p {
+    font-family: 'Inter', sans-serif;
+ }
+ 
+ /* FOOTER */
+
+ footer {
+    position: absolute;
+    bottom: 3vmin;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vmin;
+ }
+
+ footer a {
+    font-family: 'Tektur', sans-serif;
+    color: rgb(161, 249, 127);
+    text-decoration: none;
+ }
+
+ 
+ 
