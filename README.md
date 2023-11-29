@@ -15,7 +15,9 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - CSS
 - JavaScript
 
-#### **_Screenshots_**
+#### **_Wireframe_**
+
+<img src="https://johnhansen.io/wp-content/uploads/2023/11/Glow-Worm-Wireframe.drawio.png" alt="Glow Worm Wireframe" width="auto">
 
 #### **_Future Updates_**
 
