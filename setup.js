@@ -26,6 +26,7 @@ let level;
 let highScore;
 let currentScore;
 let time;
+let timerInterval;
 
 // Worm
 let wormHeadCoords;
@@ -154,6 +155,32 @@ function randomPosition(condition) {
     } else {
         return Math.floor(Math.random() * GRID_SIZE) + 1;
     }
+}
+
+/*------------------------- (RE)START GAME -------------------------*/
+
+function startGame() {
+    resetStats();
+    initWorm();
+    renderWorm();
+    renderFood();
+    moveWorm();
+    runTimer();
+}
+
+function runTimer() {
+    timerInterval = setInterval(function () {
+        time.sec++;
+        if (time.sec === 60) {
+            time.min++;
+            time.sec = 0;
+        }
+        timeEl.innerText = formatTime(time.min, time.sec);
+    }, 1000);
+}
+
+function formatTime(min, sec) {
+    return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
 }
 
 /*------------------------- INITIALIZE GAME -------------------------*/

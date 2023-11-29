@@ -16,8 +16,8 @@ function setCurrentScore(val) {
 
 function resetTimer() {
     time = {
-        'min': 0,
-        'sec': 0
+        min: 0,
+        sec: 0
     }
     timeEl.innerText = '00:00';
 }
