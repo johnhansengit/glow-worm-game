@@ -12,7 +12,14 @@ const navLinks = document.getElementById('hamburger-nav-links');
 
 // Hamburger Nav Menu Functionality
 hamburgerBtn.addEventListener('click', function() {
-    navLinks.style.display = (navLinks.style.display == 'none') ? 'flex' : 'none';
+    if(navLinks.style.opacity == '0' || navLinks.style.opacity == '') {
+        navLinks.style.opacity = '1';
+        navLinks.style.visibility = 'visible';
+    } else {
+        navLinks.style.opacity = '0';
+        setTimeout(() => { navLinks.style.visibility = 'hidden'; }, 500);
+    }
 });
+
 
 /*------------------------- INIT FUNCTIONS -------------------------*/

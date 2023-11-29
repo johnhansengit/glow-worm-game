@@ -1,95 +1,122 @@
 * {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-    width: auto;
-    background-color: #323232;
-    color: #ddd;
-    font-family: 'Tektur', sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   margin: 0;
+   height: 100vh;
+   width: auto;
+   background-color: #323232;
+   color: #ddd;
+   font-family: 'Tektur', sans-serif;
 }
 
 
-/* HEADER */
+/* ----- HEADER----- */
+
 header {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    margin: 3vmin auto 0;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   width: 100%;
+   margin: 2vh auto 0;
 }
 
 #logo {
-    height: 30vmin;
-    width: 30vmin;
+   height: 30vmin;
+   width: 30vmin;
 }
 
 /* Navigation */
 
 #hamburger-btn {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 3vmin;
-    background-color: #323232;
-    color: #ddd;
-    padding: 2vmin;
-    font-size: 10vmin;
- }
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   right: 3vmin;
+   height: 8vh;
+   width: 15vmin;
+   background-color: #323232;
+   color: #ddd;
+   padding: 2vmin;
+   font-size: 10vmin;
+}
 
- #hamburger-nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 18.5vmin;
-    right: 3vmin;
- }
+#hamburger-nav-links {
+   visibility: hidden;
+   opacity: 0;
+   flex-direction: column;
+   position: absolute;
+   top: 9vh;
+   right: 4vmin;
+   transition: opacity 0.5s ease, visibility 0.5s;
+}
 
- #hamburger-nav-links a {
-    display: block;
-    text-align: right;
-    font-size: 4.5vmin;
-    color: #ddd;
-    text-decoration: none;
- }
+#hamburger-nav-links a {
+   display: block;
+   text-align: right;
+   font-size: 4.5vmin;
+   color: #ddd;
+   text-decoration: none;
+}
 
- /* MAIN CONTENT*/
+/* ----- MAIN CONTENT ----- */
 
- main {
-    margin-top: 3vmin;
-    height: 70vh;
-    width: 80vw;
-    border: 1px solid #ddd;
-    border-radius: 1.5vmin;
-    padding: 3vmin;
-    box-shadow: 0 0 10vmin 5vmin rgba(161, 249, 127, 0.5); 
-    font-size: 3vmin;
- }
+main {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 3vmin;
+   height: 70vh;
+   width: 80vw;
+   border: 1px solid #ddd;
+   border-radius: 1.5vmin;
+   padding: 3vmin;
+   box-shadow: 0 0 5vmin 1vmin rgba(161, 249, 127, 0.5);
+   font-size: 3vmin;
+}
 
- #about p {
-    font-family: 'Inter', sans-serif;
- }
- 
- /* FOOTER */
+#about p {
+   font-family: 'Inter', sans-serif;
+}
 
- footer {
-    position: absolute;
-    bottom: 3vmin;
-    font-family: 'Inter', sans-serif;
-    font-size: 3vmin;
- }
+/* FOOTER */
 
- footer a {
-    font-family: 'Tektur', sans-serif;
-    color: rgb(161, 249, 127);
-    text-decoration: none;
- }
+footer {
+   position: absolute;
+   bottom: 3vmin;
+   font-family: 'Inter', sans-serif;
+   font-size: 3vmin;
+}
 
- 
- 
+footer a {
+   font-family: 'Tektur', sans-serif;
+   color: rgb(161, 249, 127);
+   text-decoration: none;
+}
+
+/* ----- BUTTONS ----- */
+
+button {
+   height: 11vmin;
+   width: 20vmin;
+   background-color: rgb(71, 155, 90);
+   border: none;
+   border-radius: 2vmin;
+   color: #ddd;
+   font-family: 'Tektur', sans-serif;
+   font-weight: 500;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.541);
+}
+
+#start-game {
+   margin-bottom: 1.5vmin;
+   width: 30vmin;
+}
