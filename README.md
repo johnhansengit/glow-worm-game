@@ -19,6 +19,12 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
+- [ ] Responsive Design
+- [ ] Icons for food rather than text symbols
+- [ ] Food info area
+- [ ] Background music
+- [ ] Light up when eating food (different for different types)
+- [ ] Sound effects
 - [ ] Implement player name and leaderboard
 
 #### **_Credits_**

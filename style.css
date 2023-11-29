@@ -163,7 +163,9 @@ grid {
    text-align: center;
 }
 
-/* ----- CONTROLS ----- */
+/* ----- WORM ----- */
+
+/* ----- FOOD ----- */
 
 /* ----- FOOTER ----- */
 
@@ -198,6 +200,8 @@ button {
    margin-bottom: 1.5vmin;
    width: 30vmin;
 }
+
+/* Controls */
 
 #controls-container {
    margin-top: 3vmin;
