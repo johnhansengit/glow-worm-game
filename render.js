@@ -55,7 +55,16 @@ function getAdjacentSquares([x, y]) {
 }
 
 function renderWormTail() {
+    // Clear previous body classes
+    document.querySelectorAll('.worm-tail').forEach(el => el.classList.remove('worm-tail'));
 
+    wormBody.forEach((bodySegId) => {
+        let [x, y] = bodySegId;
+        let bodySeg = document.getElementById(`x${x}y${y}`);
+        if (bodySeg) {
+            bodySeg.className = 'worm-tail';
+        }
+    });
 }
 
 
