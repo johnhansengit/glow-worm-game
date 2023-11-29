@@ -7,6 +7,7 @@
 //Hamburger Nav Menu
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navLinks = document.getElementById('hamburger-nav-links');
+const startBtn = document.getElementById('start-game');
 
 /*------------------------- EVENT LISTENERS -------------------------*/
 
@@ -21,5 +22,11 @@ hamburgerBtn.addEventListener('click', function() {
     }
 });
 
+// Start Game Button
+if (startBtn) {
+    startBtn.addEventListener('click', function() {
+        window.location.href = 'game.html';
+    });
+}
 
 /*------------------------- INIT FUNCTIONS -------------------------*/
