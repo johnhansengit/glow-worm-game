@@ -30,6 +30,7 @@ let timerInterval;
 
 // Worm
 let wormHeadCoords;
+let wormHead;
 let wormTail;
 let glowArea;
 let moveInterval;
@@ -157,31 +158,6 @@ function randomPosition(condition) {
     }
 }
 
-/*------------------------- (RE)START GAME -------------------------*/
-
-function startGame() {
-    resetStats();
-    initWorm();
-    renderWorm();
-    renderFood();
-    moveWorm();
-    runTimer();
-}
-
-function runTimer() {
-    timerInterval = setInterval(function () {
-        time.sec++;
-        if (time.sec === 60) {
-            time.min++;
-            time.sec = 0;
-        }
-        timeEl.innerText = formatTime(time.min, time.sec);
-    }, 1000);
-}
-
-function formatTime(min, sec) {
-    return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-}
 
 /*------------------------- INITIALIZE GAME -------------------------*/
 
