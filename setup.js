@@ -10,7 +10,7 @@ const STARTING_SPEED = 150;
 const STARTING_SPEED_CHANGE_INCREMENT = 25;
 const STARTING_NUM_OF_FOOD = 2;
 
-// Direction changes to X,Y coordinates
+// Direction change to X,Y coordinates
 const D = {
     up: [0, 1],
     right: [1, 0],
@@ -21,16 +21,36 @@ const D = {
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
+// Stats
+let level;
+let highScore;
+let currentScore;
+let time;
+
+// Worm
+let wormHeadCoords;
+let wormTail;
 let glowArea;
+let moveInterval;
 let wormSpeed;
+let wormDirection;
 
 
 /*------------------------- CACHED ELEMENTS -------------------------*/
 
-//Hamburger Nav Menu
+// Hamburger Nav Menu
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navLinks = document.getElementById('hamburger-nav-links');
 const startBtn = document.getElementById('start-game');
+
+// Stats
+const levelEl = document.getElementById('level');
+const highScoreEl = document.getElementById('high-score-val');
+const currentScoreEl = document.getElementById('current-score-val');
+const timeEl = document.getElementById('time-val');
+
+// Grid
+const grid = document.getElementById('grid');
 
 
 /*------------------------- EVENT LISTENERS -------------------------*/
@@ -93,3 +113,49 @@ const dimmer = new GlowFood('Dimmer', '•', 10, -1);
 const faster = new SpeedFood('Faster', '↑', 10, 1);
 const slower = new SpeedFood('Slower', '↓', 0, -1);
 
+// Initialize Functions
+function init() {
+    setHighScore(0);
+    resetStats();
+    renderGrid();
+}
+
+function resetStats() {
+    setCurrentScore(0);
+    resetTimer();
+    setLevel(1);
+}
+
+function initWorm() {
+    // Initialize Worm Head
+    let xStart = randomPosition('leftHalf');
+    let yStart = randomPosition();
+    wormHeadCoords = [xStart, yStart];
+
+    // Initialize Worm Tail
+    wormTail = [];
+    for (let i = 1; i <= STARTING_WORM_LENGTH; i++) {
+        wormTail.unshift([xStart - i, yStart]);
+    }
+
+    // Initialize Glow Area
+    glowArea = STARTING_GLOW_AREA;
+
+    // Initialize Speed & Direction
+    moveInterval = null;
+    wormSpeed = STARTING_SPEED;
+    wormDirection = D.right;
+}
+
+// Randomizers
+function randomPosition(condition) {
+    if (condition === 'leftHalf') {
+        return Math.floor(Math.random() * (GRID_SIZE / 2) + STARTING_WORM_LENGTH + 1);
+    } else {
+        return Math.floor(Math.random() * GRID_SIZE) + 1;
+    }
+}
+
+/*------------------------- INITIALIZE GAME -------------------------*/
+
+init();

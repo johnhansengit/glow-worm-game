@@ -27,8 +27,8 @@ header {
 }
 
 #logo {
-   height: 30vmin;
-   width: 30vmin;
+   height: 25vmin;
+   width: 25vmin;
 }
 
 /* Navigation */
@@ -142,7 +142,7 @@ header {
 
 /* ----- GRID ----- */
 
-grid {
+#grid {
    display: grid;
    width: 80vmin; 
    height: 80vmin;
