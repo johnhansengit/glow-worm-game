@@ -296,7 +296,8 @@ button:active,
 #arrow-up:active,
 #arrow-left:active,
 #arrow-right:active,
-#arrow-down:active {
+#arrow-down:active,
+.button-clicked {
    background-color: rgb(161, 249, 127);
    color: rgb(71, 155, 90);
    border: 1px solid #999;

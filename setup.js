@@ -36,6 +36,7 @@ let glowArea;
 let moveInterval;
 let wormSpeed;
 let wormDirection;
+let newWormId;
 
 // Food
 let foods;
@@ -61,11 +62,21 @@ const timeEl = document.getElementById('time-val');
 // Grid
 const grid = document.getElementById('grid');
 
-// Message Container
-const msgCont = document.querySelector('.message-container');
+// Message Containers
+const startCont = document.getElementById('start-game-container');
+const restartCont = document.getElementById('restart-game-container')
 
 // Buttons
 const startBtn = document.getElementById('start-btn');
+const restartBtn = document.getElementById('restart-btn');
+const quitBtn = document.getElementById('quit-reset-btn');
+
+const pauseBtn = document.getElementById('pause');
+
+const upArrow = document.getElementById('arrow-up');
+const rightArrow = document.getElementById('arrow-right');
+const downArrow = document.getElementById('arrow-down');
+const leftArrow = document.getElementById('arrow-left');
 
 
 /*------------------------- EVENT LISTENERS -------------------------*/
@@ -92,6 +103,80 @@ if (goToGameBtn) {
 if (startBtn) {
     startBtn.addEventListener('click', startGame);
 }
+
+restartBtn.addEventListener('click', startGame);
+
+quitBtn.addEventListener('click', function () {
+    restartCont.style.display = 'none';
+    init();
+});
+
+// Pause Button
+pauseBtn.addEventListener('click', pauseGame);
+
+// Arrow Keys
+document.addEventListener('keydown', function (event) {
+    let newDirection;
+    let buttonId;
+    switch (event.key) {
+        case ' ':
+            buttonId = 'pause';
+            event.preventDefault();
+            pauseGame();
+            break;
+        case 'ArrowUp':
+            buttonId = 'arrow-up';
+            newDirection = D.up;
+            break;
+        case 'ArrowRight':
+            buttonID = 'arrow-right';
+            newDirection = D.right;
+            break;
+        case 'ArrowDown':
+            buttonId = 'arrow-down';
+            newDirection = D.down;
+            break;
+        case 'ArrowLeft':
+            buttonId = 'arrow-left';
+            newDirection = D.left;
+            break;
+
+        default:
+            return;
+    }
+
+    const button = document.getElementById(buttonId);
+    if (button) {
+        button.classList.add('button-clicked');
+        // Remove the class after a short delay to mimic a button click
+        setTimeout(() => button.classList.remove('button-clicked'), 100);
+    }
+
+    changeDirection(newDirection);
+});
+
+// Arrow Buttons
+
+upArrow.addEventListener('click', function () {
+    newDirection = D.up;
+    changeDirection(newDirection);
+});
+
+rightArrow.addEventListener('click', function () {
+    newDirection = D.right;
+    changeDirection(newDirection);
+});
+
+downArrow.addEventListener('click', function () {
+    newDirection = D.down;
+    changeDirection(newDirection);
+});
+
+leftArrow.addEventListener('click', function () {
+    newDirection = D.left;
+    changeDirection(newDirection);
+});
+
 
 
 /*------------------------- INIT FUNCTIONS -------------------------*/
@@ -140,6 +225,7 @@ function init() {
     setHighScore(0);
     resetStats();
     renderGrid();
+    startCont.style.display = 'flex';
 }
 
 function resetStats() {

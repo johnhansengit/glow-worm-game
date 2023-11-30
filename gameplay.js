@@ -23,7 +23,8 @@ function resetTimer() {
 /*------------------------- (RE)START GAME -------------------------*/
 
 function startGame() {
-    msgCont.style.display = 'none';
+    startCont.style.display = 'none';
+    restartCont.style.display = 'none';
     numOfFood = STARTING_NUM_OF_FOOD;
     resetStats();
     initWorm();
@@ -59,7 +60,7 @@ function moveWorm() {
         // Calculate new head position
         let newHeadX = wormHeadCoords[0] + wormDirection[0];
         let newHeadY = wormHeadCoords[1] + wormDirection[1];
-        let newWormId = `x${newHeadX}y${newHeadY}`
+        newWormId = `x${newHeadX}y${newHeadY}`
 
         // Check if worm head is outside of grid
         if (
@@ -158,15 +159,39 @@ function resetMoveInterval() {
 }
 
 function gameOver() {
-
+    clearInterval(moveInterval);
+    clearInterval(timerInterval);
+    renderGrid();
+    restartCont.style.display = 'flex';
 }
 
-/*------------------------- EVENT HANDLEFRS -------------------------*/
+/*------------------------- EVENT HANDLERS -------------------------*/
 
-function changeDirection() {
-
+function changeDirection(newDirection) {
+    // Check if it's a valid direction change (no 180-degree turns)
+    if (newDirection[0] !== -wormDirection[0] && newDirection[1] !== -wormDirection[1]) {
+        wormDirection = newDirection;
+    }
 }
 
 function pauseGame() {
+    // Check if the game is not already paused
+    if (moveInterval) {
+        // Clear existing intervals to stop worm movement and timer
+        clearInterval(moveInterval);
+        clearInterval(timerInterval);
 
+        // Set intervals to null to indicate the game is paused
+        moveInterval = null;
+        timerInterval = null;
+
+        pauseBtn.innerText = 'Resume';
+
+    } else {
+        // If game is paused, resume the game
+        moveWorm();
+        runTimer();
+
+        pauseBtn.innerText = 'Pause';
+    }
 }
