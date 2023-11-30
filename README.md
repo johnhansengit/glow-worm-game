@@ -26,9 +26,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - [ ] Icons for food rather than text symbols
 - [ ] Make final segment of worm tail a triangle (pointed in the right direction)?
 - [ ] Food info area
-- [ ] Background music
 - [ ] Light up when eating food (different for different types)
-- [ ] Sound effects
 - [ ] Implement player name and leaderboard
 
 #### **_Credits_**
@@ -36,11 +34,11 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - Glow Worm logo: [DALL-E 2](https://openai.com/dall-e-2)
 - Normalize CSS: [Normalize.css](https://cdnjs.com/libraries/normalize)
 - Fonts: [Google Fonts](fonts.google.com)
+- Background music: [Powerful Trap Beat | Strong by Alex-Productions](https://onsound.eu/)
+- Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
+
 
 Powerful Trap Beat | Strong by Alex-Productions | https://onsound.eu/
 Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons CC BY 3.0
 https://creativecommons.org/licenses/by/3.0/
- 
-
- <audio preload="none" src="https://www.chosic.com/wp-content/uploads/2022/03/Powerful-Trap-(chosic.com).mp3" style="width: 100%;"></audio>

@@ -26,8 +26,11 @@ const actions = {
     'ArrowLeft': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
 };
 
+// Sound
 const backgroundMusic = new Audio('https://www.chosic.com/wp-content/uploads/2022/03/Powerful-Trap-(chosic.com).mp3');
 backgroundMusic.loop = true;
+
+const eatSound = new Audio('https://www.chosic.com/wp-content/uploads/2023/10/Wooden-Frog-Croaks-chosic.com_.mp3')
 
 /*------------------------- STATE VARIABLES -------------------------*/
 

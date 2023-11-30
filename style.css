@@ -206,6 +206,7 @@ header {
 
 .glow {
    background-color: rgba(161, 249, 127, 0.1) !important;
+   transition: background-color 0.25s ease;
 }
 
 .worm-tail {

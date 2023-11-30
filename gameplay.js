@@ -102,6 +102,7 @@ function moveWorm() {
 }
 
 function eatFood() {
+    playSoundEffect(eatSound);
     let foodEaten = document.getElementById(newWormId).innerText;
 
     foods.forEach((food) => {
@@ -126,6 +127,15 @@ function eatFood() {
     wormTail.unshift([...wormHeadCoords]);
 }
 
+function playSoundEffect(soundEffect) {
+    soundEffect.currentTime = 2.4;
+    soundEffect.play();
+    setTimeout(function () {
+        soundEffect.pause();
+        soundEffect.currentTime = 2.4;
+    }, 500);
+}
+
 function updateCurrentScore() {
     currentScore += points;
     currentScoreEl.innerText = currentScore;
@@ -146,7 +156,7 @@ function levelUp() {
     level++;
     levelEl.innerHTML = '<span style="color: rgb(161, 249, 127);"><strong>LEVEL UP!</strong></span>';
     let newSpeedInc = STARTING_SPEED_CHANGE_INCREMENT * Math.pow(0.8, level - 1);
-    adjustWormSpeed(wormSpeed - newSpeedInc); 
+    adjustWormSpeed(wormSpeed - newSpeedInc);
     setTimeout(function updateLevel() {
         levelEl.innerHTML = `Level: ${level}`;
     }, 3000);
