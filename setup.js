@@ -164,8 +164,8 @@ const smallFood = new Food('Small Food', 'f', 10);
 const largeFood = new Food('Large Food', '(F)', 20);
 const poisonFood = new PoisonFood('Poison!', 'x', -20);
 const brighter = new GlowFood('Brighter', 'O', 0, 1);
-const dimmer = new GlowFood('Dimmer', '•', 10, -1);
-const faster = new SpeedFood('Faster', '↑', 10, 1);
+const dimmer = new GlowFood('Dimmer', '•', 20, -1);
+const faster = new SpeedFood('Faster', '↑', 20, 1);
 const slower = new SpeedFood('Slower', '↓', 0, -1);
 
 foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];

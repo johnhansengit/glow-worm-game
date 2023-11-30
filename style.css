@@ -40,11 +40,10 @@ header {
    position: absolute;
    top: 0;
    right: 3vmin;
-   height: 8vh;
+   height: 15vmin;
    width: 15vmin;
    background-color: #414141;
    color: #ddd;
-   padding: 2vmin;
    font-size: 10vmin;
 }
 
@@ -229,7 +228,10 @@ header {
 
 footer {
    position: absolute;
-   bottom: 3vmin;
+   display: flex;
+   flex-direction: row;
+   gap: 10vmin;
+   bottom: 2vmin;
    font-family: 'Inter', sans-serif;
    font-size: 3vmin;
 }
