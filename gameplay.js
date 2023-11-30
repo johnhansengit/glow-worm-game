@@ -1,14 +1,17 @@
 /*------------------------- SET STATS -------------------------*/
 
 function setLevel(val) {
+    level = val;
     levelEl.innerHTML = `Level: ${val}`;
 }
 
 function setHighScore(val) {
+    highScore = val;
     highScoreEl.innerText = val;
 }
 
 function setCurrentScore(val) {
+    currentScore = val;
     currentScoreEl.innerText = val;
 }
 
@@ -119,7 +122,7 @@ function eatFood() {
     renderFood();
 
     // Add new segment at current head position (before moving the head)
-    wormBody.unshift([...wormHeadCoords]);
+    wormTail.unshift([...wormHeadCoords]);
 }
 
 function updateCurrentScore() {
@@ -141,14 +144,14 @@ function updateHighScore() {
 function levelUp() {
     level++;
     levelEl.innerHTML = '<span style="color: rgb(161, 249, 127);"><strong>LEVEL UP!</strong></span>';
-    let newSpeedInc = SPEED_INCREMENT * Math.pow(0.8, level - 1);
+    let newSpeedInc = STARTING_SPEED_CHANGE_INCREMENT * Math.pow(0.8, level - 1);
     adjustWormSpeed(wormSpeed - newSpeedInc); 
     setTimeout(function updateLevel() {
         levelEl.innerHTML = `Level: ${level}`;
-    }, 2000);
+    }, 3000);
 }
 
-function adjustWormSpeed() {
+function adjustWormSpeed(newSpeed) {
     wormSpeed = newSpeed;
     resetMoveInterval();
 }
@@ -166,6 +169,20 @@ function gameOver() {
 }
 
 /*------------------------- EVENT HANDLERS -------------------------*/
+
+function handleInput(input) {
+    const actionInfo = actions[input];
+    if (!actionInfo) return;
+
+    const { action, buttonId } = actionInfo;
+    action();
+
+    const button = document.getElementById(buttonId);
+    if (button) {
+        button.classList.add('button-clicked');
+        setTimeout(() => button.classList.remove('button-clicked'), 100);
+    }
+}
 
 function changeDirection(newDirection) {
     // Check if it's a valid direction change (no 180-degree turns)

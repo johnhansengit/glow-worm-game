@@ -18,6 +18,14 @@ const D = {
     left: [-1, 0],
 };
 
+const actions = {
+    ' ': { action: pauseGame, buttonId: 'pause' },
+    'ArrowUp': { action: () => changeDirection(D.up), buttonId: 'arrow-up' },
+    'ArrowRight': { action: () => changeDirection(D.right), buttonId: 'arrow-right' },
+    'ArrowDown': { action: () => changeDirection(D.down), buttonId: 'arrow-down' },
+    'ArrowLeft': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
+};
+
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
@@ -111,73 +119,18 @@ quitBtn.addEventListener('click', function () {
     init();
 });
 
-// Pause Button
-pauseBtn.addEventListener('click', pauseGame);
-
-// Arrow Keys
+// Event listener for keyboard
 document.addEventListener('keydown', function (event) {
-    let newDirection;
-    let buttonId;
-    switch (event.key) {
-        case ' ':
-            buttonId = 'pause';
-            event.preventDefault();
-            pauseGame();
-            break;
-        case 'ArrowUp':
-            buttonId = 'arrow-up';
-            newDirection = D.up;
-            break;
-        case 'ArrowRight':
-            buttonID = 'arrow-right';
-            newDirection = D.right;
-            break;
-        case 'ArrowDown':
-            buttonId = 'arrow-down';
-            newDirection = D.down;
-            break;
-        case 'ArrowLeft':
-            buttonId = 'arrow-left';
-            newDirection = D.left;
-            break;
-
-        default:
-            return;
-    }
-
-    const button = document.getElementById(buttonId);
-    if (button) {
-        button.classList.add('button-clicked');
-        // Remove the class after a short delay to mimic a button click
-        setTimeout(() => button.classList.remove('button-clicked'), 100);
-    }
-
-    changeDirection(newDirection);
+    handleInput(event.key);
+    event.preventDefault();
 });
 
-// Arrow Buttons
-
-upArrow.addEventListener('click', function () {
-    newDirection = D.up;
-    changeDirection(newDirection);
-});
-
-rightArrow.addEventListener('click', function () {
-    newDirection = D.right;
-    changeDirection(newDirection);
-});
-
-downArrow.addEventListener('click', function () {
-    newDirection = D.down;
-    changeDirection(newDirection);
-});
-
-leftArrow.addEventListener('click', function () {
-    newDirection = D.left;
-    changeDirection(newDirection);
-});
-
-
+// Event listeners for mouse
+document.getElementById('pause').addEventListener('click', () => handleInput(' '));
+document.getElementById('arrow-up').addEventListener('click', () => handleInput('ArrowUp'));
+document.getElementById('arrow-right').addEventListener('click', () => handleInput('ArrowRight'));
+document.getElementById('arrow-down').addEventListener('click', () => handleInput('ArrowDown'));
+document.getElementById('arrow-left').addEventListener('click', () => handleInput('ArrowLeft'));
 
 /*------------------------- INIT FUNCTIONS -------------------------*/
 

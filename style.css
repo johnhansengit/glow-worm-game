@@ -55,7 +55,7 @@ header {
    position: absolute;
    top: 9vh;
    right: 4vmin;
-   transition: opacity 0.5s ease, visibility 0.5s;
+   transition: opacity 0.25s ease, visibility 0.25s;
 }
 
 #hamburger-nav-links a {
