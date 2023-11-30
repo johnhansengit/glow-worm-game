@@ -206,7 +206,7 @@ header {
 
 .worm-head {
    background-color: rgb(161, 249, 127) !important;
-   box-shadow: 0 0 15vmin 15vmin rgba(161, 249, 127, 0.5); 
+   box-shadow: 0 0 15vmin 8vmin rgba(161, 249, 127, 0.5); 
    z-index: 2; 
 }
 

@@ -42,6 +42,7 @@ let foods;
 let numOfFood;
 let foodPosition;
 let food;
+let points;
 
 
 /*------------------------- CACHED ELEMENTS -------------------------*/
@@ -109,7 +110,7 @@ class GlowFood extends Food {
         super(name, symb, points);
         this.glowEffect = glowEffect;
     }
-    changeGlow() {
+    effect() {
         glowArea += this.glowEffect;
     }
 }
@@ -119,7 +120,7 @@ class SpeedFood extends Food {
         super(name, symb, points);
         this.speedEffect = speedEffect;
     }
-    changeSpeed() {
+    effect() {
         wormSpeed += this.speedEffect * STARTING_SPEED_CHANGE_INCREMENT;
     }
 }
