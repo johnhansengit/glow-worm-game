@@ -5,7 +5,6 @@ Project Completed Due Date: 12/6/23 by 10:00 AM EST
 
 *** IN PROGRESS ***
 - Include a beautiful, professional README.md (use markdown)
-- Have at least 20 meaningful git commits. You should be committing your changes every time you build a new feature.
 
 
 *** FINAL CHECKS ***
@@ -21,3 +20,4 @@ Project Completed Due Date: 12/6/23 by 10:00 AM EST
 - Include a minimum of 2 event handlers
 - Use camelCase for JavaScript variables
 - Your code should be properly indented, spaced, and within code blocks. DO NOT leave in commented out code that was left unused (bad practice). Comments, if in your code at all, should be in your code to describe what your functions are doing.
+- Have at least 20 meaningful git commits. You should be committing your changes every time you build a new feature.

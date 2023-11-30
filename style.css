@@ -195,6 +195,11 @@ header {
    text-align: center;
 }
 
+#grid > div > img {
+   width: 10vmin;
+   height: 10vmin;
+}
+
 /* ----- WORM ----- */
 
 .worm-head {

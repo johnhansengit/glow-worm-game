@@ -27,10 +27,10 @@ const actions = {
 };
 
 // Sound
-const backgroundMusic = new Audio('https://www.chosic.com/wp-content/uploads/2022/03/Powerful-Trap-(chosic.com).mp3');
+const backgroundMusic = new Audio('Sound/background-music.mp3');
 backgroundMusic.loop = true;
 
-const eatSound = new Audio('https://www.chosic.com/wp-content/uploads/2023/10/Wooden-Frog-Croaks-chosic.com_.mp3')
+const eatSound = new Audio('Sound/eat-sound.mp3')
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
@@ -160,13 +160,13 @@ class PoisonFood extends Food {
     }
 }
 
-const smallFood = new Food('Small Food', 'f', 10);
-const largeFood = new Food('Large Food', '(F)', 20);
-const poisonFood = new PoisonFood('Poison!', 'x', -20);
-const brighter = new GlowFood('Brighter', 'O', 0, 1);
-const dimmer = new GlowFood('Dimmer', '•', 20, -1);
-const faster = new SpeedFood('Faster', '↑', 20, 1);
-const slower = new SpeedFood('Slower', '↓', 0, -1);
+const smallFood = new Food('Small Food', 'Food Icons/smallFood.svg', 10);
+const largeFood = new Food('Large Food', 'Food Icons/largeFood.svg', 20);
+const poisonFood = new PoisonFood('Poison!', 'Food_Icons/poison.svg', -20);
+const brighter = new GlowFood('Brighter', 'Food Icons/brighter.svg', 0, 1);
+const dimmer = new GlowFood('Dimmer', 'Food Icons/dimmer.svg', 20, -1);
+const faster = new SpeedFood('Faster', 'Food Icons/faster.svg', 20, 1);
+const slower = new SpeedFood('Slower', 'Food Icons/slower.svg', 0, -1);
 
 foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];
 

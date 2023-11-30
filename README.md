@@ -33,6 +33,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - Fonts: [Google Fonts](fonts.google.com)
 - Background music: [Powerful Trap Beat | Strong by Alex-Productions](https://onsound.eu/)
 - Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
+- Food icons: [SVGRepo](svgrepo.com)
 
 
 
@@ -42,14 +43,3 @@ Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons CC BY 3.0
 https://creativecommons.org/licenses/by/3.0/
 
-<a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Freepik - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/bug" title="bug icons">Bug icons created by twentyfour - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by Freepik - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/rabbit" title="rabbit icons">Rabbit icons created by imaginationlol - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/slow" title="slow icons">Slow icons created by Freepik - Flaticon</a>
