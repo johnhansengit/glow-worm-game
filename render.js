@@ -70,3 +70,31 @@ function renderWormTail() {
 
 
 /*------------------------- FOOD -------------------------*/
+
+function renderFood() {
+    for (let i = 1; i <= numOfFood; i++) {
+        getRandomFood();
+        getRandomFoodPosition();
+
+        let foodDiv = document.getElementById(`x${foodPosition.x}y${foodPosition.y}`);
+        if (foodDiv) {
+            foodDiv.innerText = food.symb;
+        }
+    }
+}
+
+function getRandomFood() {
+    let foodIdx = Math.floor(Math.random() * foods.length);
+    food = foods[foodIdx];
+    return food;
+}
+
+function getRandomFoodPosition() {
+    let newFoodX, newFoodY;
+    do {
+        newFoodX = randomCoord();
+        newFoodY = randomCoord();
+    } while (wormTail.some(segment => segment[0] === newFoodX && segment[1] === newFoodY) || (wormHeadCoords[0] === newFoodX && wormHeadCoords[1] === newFoodY) || document.getElementById(`x${newFoodX}y${newFoodY}`).innerText);
+
+    foodPosition = { x: newFoodX, y: newFoodY };
+}

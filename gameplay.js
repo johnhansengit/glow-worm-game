@@ -24,11 +24,12 @@ function resetTimer() {
 
 function startGame() {
     msgCont.style.display = 'none';
+    numOfFood = STARTING_NUM_OF_FOOD;
     resetStats();
     initWorm();
     renderWorm();
     renderFood();
-    moveWorm();
+    // moveWorm();
     runTimer();
 }
 

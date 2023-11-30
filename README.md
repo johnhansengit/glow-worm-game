@@ -21,6 +21,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
+- [ ] Separate CSS pages
 - [ ] Responsive Design
 - [ ] Icons for food rather than text symbols
 - [ ] Make final segment of worm tail a triangle (pointed in the right direction)?

@@ -37,6 +37,12 @@ let moveInterval;
 let wormSpeed;
 let wormDirection;
 
+// Food
+let foods;
+let numOfFood;
+let foodPosition;
+let food;
+
 
 /*------------------------- CACHED ELEMENTS -------------------------*/
 
@@ -126,6 +132,8 @@ const dimmer = new GlowFood('Dimmer', '•', 10, -1);
 const faster = new SpeedFood('Faster', '↑', 10, 1);
 const slower = new SpeedFood('Slower', '↓', 0, -1);
 
+foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];
+
 // Initialize Functions
 function init() {
     setHighScore(0);
@@ -141,8 +149,8 @@ function resetStats() {
 
 function initWorm() {
     // Initialize Worm Head
-    let xStart = randomPosition('leftHalf');
-    let yStart = randomPosition();
+    let xStart = randomCoord('leftHalf');
+    let yStart = randomCoord();
     wormHeadCoords = [xStart, yStart];
 
     // Initialize Worm Tail
@@ -161,7 +169,7 @@ function initWorm() {
 }
 
 // Randomizers
-function randomPosition(condition) {
+function randomCoord(condition) {
     if (condition === 'leftHalf') {
         return Math.floor(Math.random() * (GRID_SIZE / 2) + STARTING_WORM_LENGTH + 1);
     } else {
