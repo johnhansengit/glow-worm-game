@@ -42,7 +42,7 @@ header {
    right: 3vmin;
    height: 8vh;
    width: 15vmin;
-   background-color: #323232;
+   background-color: #414141;
    color: #ddd;
    padding: 2vmin;
    font-size: 10vmin;
@@ -110,20 +110,14 @@ header {
    z-index: 10;
 }
 
-.message-container h2 {
-
-}
-
-.message-container p {
-   font-family: 'Inter', sans-serif;
-}
-
-#start-game-container {
-
-}
-
 #restart-game-container {
    display: none;
+}
+
+#reset-btns-container {
+   display: flex;
+   flex-direction: row;
+   gap: 10vmin;
 }
 
 /* ----- STATS ----- */
@@ -248,7 +242,7 @@ button {
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.541);
 }
 
-#go-to-game {
+#go-to-game, #start-btn, #restart-btn, #quit-reset-btn {
    margin-bottom: 1.5vmin;
    width: 30vmin;
 }
