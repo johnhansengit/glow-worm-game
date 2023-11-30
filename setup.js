@@ -43,7 +43,7 @@ let wormDirection;
 // Hamburger Nav Menu
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navLinks = document.getElementById('hamburger-nav-links');
-const startBtn = document.getElementById('start-game');
+const goToGameBtn = document.getElementById('go-to-game');
 
 // Stats
 const levelEl = document.getElementById('level');
@@ -53,6 +53,12 @@ const timeEl = document.getElementById('time-val');
 
 // Grid
 const grid = document.getElementById('grid');
+
+// Message Container
+const msgCont = document.querySelector('.message-container');
+
+// Buttons
+const startBtn = document.getElementById('start-btn');
 
 
 /*------------------------- EVENT LISTENERS -------------------------*/
@@ -68,11 +74,16 @@ hamburgerBtn.addEventListener('click', function () {
     }
 });
 
-// Start Game Button
-if (startBtn) {
-    startBtn.addEventListener('click', function () {
+// Go To Game Button
+if (goToGameBtn) {
+    goToGameBtn.addEventListener('click', function () {
         window.location.href = 'game.html';
     });
+}
+
+// Start/Restart/Quit Game Buttons
+if (startBtn) {
+    startBtn.addEventListener('click', startGame);
 }
 
 

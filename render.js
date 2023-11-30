@@ -22,15 +22,15 @@ function renderWorm() {
 }
 
 function renderWormHead() {
-    wormHead = document.getElementById(`x${wormHeadId[0]}y${wormHeadId[1]}`);
+    wormHead = document.getElementById(`x${wormHeadCoords[0]}y${wormHeadCoords[1]}`);
     wormHead.className = 'worm-head';
-    renderGlow(wormHeadId);
+    renderGlow(wormHeadCoords);
 }
 
-function renderGlow(wormHeadId) {
+function renderGlow(wormHeadCoords) {
     document.querySelectorAll('.glow').forEach(el => el.classList.remove('glow'));
 
-    let adjacentIds = getAdjacentSquares(wormHeadId);
+    let adjacentIds = getAdjacentSquares(wormHeadCoords);
     adjacentIds.forEach(id => {
         let square = document.getElementById(id);
         if (square && !square.classList.contains('worm-tail')) {
@@ -55,14 +55,14 @@ function getAdjacentSquares([x, y]) {
 }
 
 function renderWormTail() {
-    // Clear previous body classes
+    // Clear previous tail classes
     document.querySelectorAll('.worm-tail').forEach(el => el.classList.remove('worm-tail'));
 
-    wormBody.forEach((bodySegId) => {
-        let [x, y] = bodySegId;
-        let bodySeg = document.getElementById(`x${x}y${y}`);
-        if (bodySeg) {
-            bodySeg.className = 'worm-tail';
+    wormTail.forEach((tailSegId) => {
+        let [x, y] = tailSegId;
+        let tailSeg = document.getElementById(`x${x}y${y}`);
+        if (tailSeg) {
+            tailSeg.className = 'worm-tail';
         }
     });
 }

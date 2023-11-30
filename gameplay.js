@@ -23,6 +23,7 @@ function resetTimer() {
 /*------------------------- (RE)START GAME -------------------------*/
 
 function startGame() {
+    msgCont.style.display = 'none';
     resetStats();
     initWorm();
     renderWorm();
