@@ -35,6 +35,7 @@ function startGame() {
     renderFood();
     moveWorm();
     runTimer();
+    backgroundMusic.play();
 }
 
 function runTimer() {
@@ -164,6 +165,8 @@ function resetMoveInterval() {
 function gameOver() {
     clearInterval(moveInterval);
     clearInterval(timerInterval);
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
     renderGrid();
     restartCont.style.display = 'flex';
 }
@@ -202,6 +205,7 @@ function pauseGame() {
         moveInterval = null;
         timerInterval = null;
 
+        backgroundMusic.pause();
         pauseBtn.innerText = 'Resume';
 
     } else {
@@ -209,6 +213,7 @@ function pauseGame() {
         moveWorm();
         runTimer();
 
+        backgroundMusic.play();
         pauseBtn.innerText = 'Pause';
     }
 }

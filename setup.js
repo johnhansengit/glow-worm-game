@@ -26,6 +26,8 @@ const actions = {
     'ArrowLeft': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
 };
 
+const backgroundMusic = new Audio('https://www.chosic.com/wp-content/uploads/2022/03/Powerful-Trap-(chosic.com).mp3');
+backgroundMusic.loop = true;
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
