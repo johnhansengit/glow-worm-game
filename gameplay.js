@@ -125,6 +125,11 @@ function eatFood() {
 
     // Add new segment at current head position (before moving the head)
     wormTail.unshift([...wormHeadCoords]);
+
+    // Clear justAte
+    setTimeout(() => {
+        justAte = null;
+    }, 750);
 }
 
 function playSoundEffect(soundEffect) {

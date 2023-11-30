@@ -24,8 +24,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - [ ] Music credit
 - [ ] Responsive Design
 - [ ] Icons for food rather than text symbols
-- [ ] Make final segment of worm tail a triangle (pointed in the right direction)?
-- [ ] Food info area
+- [ ] Check that speed increases are working
 - [ ] Light up when eating food (different for different types)
 - [ ] Implement player name and leaderboard
 

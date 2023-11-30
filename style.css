@@ -204,6 +204,18 @@ header {
    z-index: 2; 
 }
 
+.just-ate {
+   background-color: white !important;
+   box-shadow: 0 0 15vmin 8vmin rgba(255, 255, 255, 0.5); 
+   z-index: 2; 
+}
+
+.poisoned {
+   background-color: rgb(249, 127, 127) !important;
+   box-shadow: 0 0 18vmin 15vmin rgba(249, 127, 127, 0.75); 
+   z-index: 2; 
+}
+
 .glow {
    background-color: rgba(161, 249, 127, 0.1) !important;
 }

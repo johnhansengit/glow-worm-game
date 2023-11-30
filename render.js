@@ -23,7 +23,13 @@ function renderWorm() {
 
 function renderWormHead() {
     wormHead = document.getElementById(`x${wormHeadCoords[0]}y${wormHeadCoords[1]}`);
-    wormHead.className = 'worm-head';
+    if (justAte === 'food') {
+        wormHead.className = 'just-ate';
+    } else if (justAte === 'poison') {
+        wormHead.className = 'poisoned';
+    } else {
+        wormHead.className = 'worm-head';
+    }
     renderGlow(wormHeadCoords);
 }
 
