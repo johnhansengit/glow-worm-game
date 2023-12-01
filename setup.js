@@ -119,9 +119,10 @@ document.getElementById('arrow-left').addEventListener('click', () => handleInpu
 
 // Make different foods
 class Food {
-    constructor(name, symb, points) {
+    constructor(name, className, iconPath, points) {
         this.name = name;
-        this.symb = symb;
+        this.class = className;
+        this.icon = `<img src="${iconPath}">`;
         this.points = points;
     }
     effect() {
@@ -130,8 +131,8 @@ class Food {
 }
 
 class GlowFood extends Food {
-    constructor(name, symb, points, glowEffect) {
-        super(name, symb, points);
+    constructor(name, className, iconPath, points, glowEffect) {
+        super(name, className, iconPath, points);
         this.glowEffect = glowEffect;
     }
     effect() {
@@ -141,32 +142,32 @@ class GlowFood extends Food {
 }
 
 class SpeedFood extends Food {
-    constructor(name, symb, points, speedEffect) {
-        super(name, symb, points);
+    constructor(name, className, iconPath, points, speedEffect) {
+        super(name, className, iconPath, points);
         this.speedEffect = speedEffect;
     }
     effect() {
-        wormSpeed += this.speedEffect * STARTING_SPEED_CHANGE_INCREMENT;
+        wormSpeed += (this.speedEffect * STARTING_SPEED_CHANGE_INCREMENT);
         justAte = 'food';
     }
 }
 
 class PoisonFood extends Food {
-    constructor(name, symb, points) {
-        super(name, symb, points);
+    constructor(name, className, iconPath, points) {
+        super(name, className, iconPath, points);
     }
     effect() {
         justAte = 'poison';
     }
 }
 
-const smallFood = new Food('Small Food', 'Food Icons/smallFood.svg', 10);
-const largeFood = new Food('Large Food', 'Food Icons/largeFood.svg', 20);
-const poisonFood = new PoisonFood('Poison!', 'Food_Icons/poison.svg', -20);
-const brighter = new GlowFood('Brighter', 'Food Icons/brighter.svg', 0, 1);
-const dimmer = new GlowFood('Dimmer', 'Food Icons/dimmer.svg', 20, -1);
-const faster = new SpeedFood('Faster', 'Food Icons/faster.svg', 20, 1);
-const slower = new SpeedFood('Slower', 'Food Icons/slower.svg', 0, -1);
+const smallFood = new Food('Small Food', 'small-food', 'FoodIcons/smallFood.svg', 10);
+const largeFood = new Food('Large Food', 'large-food', 'FoodIcons/largeFood.svg', 20);
+const poisonFood = new PoisonFood('Poison!', 'poison-food', 'FoodIcons/poison.svg', -20);
+const brighter = new GlowFood('Brighter', 'brighter-food', 'FoodIcons/brighter.svg', 0, 1);
+const dimmer = new GlowFood('Dimmer', 'dimmer-food', 'FoodIcons/dimmer.svg', 20, -1);
+const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, 1);
+const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, -1);
 
 foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];
 

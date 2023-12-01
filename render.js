@@ -84,7 +84,8 @@ function renderFood() {
 
         let foodDiv = document.getElementById(`x${foodPosition.x}y${foodPosition.y}`);
         if (foodDiv) {
-            foodDiv.innerHTML = `<img src="${food.symb}">`;
+            foodDiv.innerHTML = food.icon;
+            foodDiv.className = food.class;
         }
     }
 }

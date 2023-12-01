@@ -63,6 +63,12 @@ header {
    font-size: 4.5vmin;
    color: #ddd;
    text-decoration: none;
+   transition: transform 0.25s ease;
+}
+
+#hamburger-nav-links a:hover {
+   color: rgb(161, 249, 127);
+   transform: translate(-5%, 0%)
 }
 
 /* ----- LANDING CONTENT ----- */

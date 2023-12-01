@@ -21,9 +21,12 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
+
+- [ ] Separate CSS's and create master CSS
+- [ ] Fix footer spacing on landing page
 - [ ] Responsive Design
-- [ ] Icons for food rather than text symbols
-- [ ] Check that speed increases are working
+- [ ] Debug speed increases are working
+
 - [ ] Implement player name and leaderboard
 
 #### **_Credits_**
@@ -31,15 +34,12 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - Glow Worm logo: [DALL-E 2](https://openai.com/dall-e-2)
 - Normalize CSS: [Normalize.css](https://cdnjs.com/libraries/normalize)
 - Fonts: [Google Fonts](fonts.google.com)
-- Background music: [Powerful Trap Beat | Strong by Alex-Productions](https://onsound.eu/)
-- Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
 - Food icons: [SVGRepo](svgrepo.com)
+- Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
+- Background music: 
 
-
-
-
-Powerful Trap Beat | Strong by Alex-Productions | https://onsound.eu/
-Music promoted by https://www.chosic.com/free-music/all/
-Creative Commons CC BY 3.0
-https://creativecommons.org/licenses/by/3.0/
+    Powerful Trap Beat | Strong by Alex-Productions | https://onsound.eu/
+    Music promoted by https://www.chosic.com/free-music/all/
+    Creative Commons CC BY 3.0
+    https://creativecommons.org/licenses/by/3.0/
 

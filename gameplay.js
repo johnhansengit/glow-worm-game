@@ -81,7 +81,7 @@ function moveWorm() {
             return;
 
             // Check if worm head is on the food    
-        } else if (document.getElementById(newWormId).innerText) {
+        } else if (document.getElementById(newWormId).innerHTML) {
             eatFood();
 
             // Otherwise, move normally
@@ -103,10 +103,11 @@ function moveWorm() {
 
 function eatFood() {
     playSoundEffect(eatSound);
-    let foodEaten = document.getElementById(newWormId).innerText;
+    let foodEaten = document.getElementById(newWormId);
+    let foodEatenClasses = [...foodEaten.classList];
 
     foods.forEach((food) => {
-        if (food.symb === foodEaten) {
+        if (foodEatenClasses.includes(food.class)) {
 
             // Update current score
             points = food.points;
@@ -120,7 +121,8 @@ function eatFood() {
     })
 
     // Clear and generate new food position
-    document.getElementById(newWormId).innerText = '';
+    document.getElementById(newWormId).innerHTML = '';
+    document.getElementById(newWormId).classList.remove(`${food.class}`)
     renderFood();
 
     // Add new segment at current head position (before moving the head)
