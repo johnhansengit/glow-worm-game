@@ -41,6 +41,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - Normalize CSS: [Normalize.css](https://cdnjs.com/libraries/normalize)
 - Fonts: [Google Fonts](fonts.google.com)
 - Food icons: [SVGRepo](svgrepo.com)
+- Game control image: [Samuel Burn](http://sburngdl.weebly.com/rules-of-game.html)
 - Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
 - Background music: 
 

@@ -14,10 +14,33 @@
     box-shadow: 0 0 5vmin 1vmin rgba(161, 249, 127, 0.5);
     font-size: 3vmin;
  }
- 
+ #about h3 {
+   text-align: center;
+ }
+
  #about p {
     font-family: 'Inter', sans-serif;
  }
+
+ #food-table {
+   margin-top: -2vmin;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   column-gap: 2vmin;
+   grid-auto-flow: column;
+   background-color: #ddd;
+   border-radius: 1vmin;
+   padding: 1vmin;
+   text-align: left;
+   font-size: 2.75vmin;
+   color: #111
+}
+
+#food-table > div > img {
+   width: 4.5vmin;
+   transform: translate(0%, 20%);
+}
 
  #go-to-game {
     margin-bottom: 1.5vmin;
