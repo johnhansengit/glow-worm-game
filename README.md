@@ -26,6 +26,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - [ ] Fix footer spacing on landing page
 - [ ] Responsive Design
 - [ ] Debug speed increases are working
+- [ ] Debug worm tail on start/in glow area
 
 - [ ] Implement player name and leaderboard
 

@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+ }
+ 
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    width: auto;
+    background-color: #323232;
+    color: #ddd;
+    font-family: 'Tektur', sans-serif;
+ }
+ 
+ 
+ /* ----- HEADER----- */
+ 
+ header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 2vh auto 0;
+ }
+ 
+ #logo {
+    height: 25vmin;
+    width: 25vmin;
+ }
+ 
+ /* Navigation */
+ 
+ #hamburger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 3vmin;
+    height: 15vmin;
+    width: 15vmin;
+    background-color: #414141;
+    color: #ddd;
+    font-size: 10vmin;
+ }
+ 
+ #hamburger-nav-links {
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 9vh;
+    right: 4vmin;
+    transition: opacity 0.25s ease, visibility 0.25s;
+ }
+ 
+ #hamburger-nav-links a {
+    display: block;
+    text-align: right;
+    font-size: 4.5vmin;
+    color: #ddd;
+    text-decoration: none;
+    transition: transform 0.25s ease;
+ }
+ 
+ #hamburger-nav-links a:hover {
+    color: rgb(161, 249, 127);
+    transform: translate(-5%, 0%)
+ }
+
+  /* ----- BUTTONS----- */
+
+ button {
+    height: 10vmin;
+    width: 20vmin;
+    background-color: rgb(71, 155, 90);
+    border: none;
+    border-radius: 2vmin;
+    color: #ddd;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.541);
+ }

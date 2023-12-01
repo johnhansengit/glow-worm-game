@@ -1,0 +1,40 @@
+/* ----- LANDING CONTENT ----- */
+
+#landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vmin;
+    height: 70vh;
+    width: 80vw;
+    border: 1px solid #ddd;
+    border-radius: 1.5vmin;
+    padding: 3vmin;
+    box-shadow: 0 0 5vmin 1vmin rgba(161, 249, 127, 0.5);
+    font-size: 3vmin;
+ }
+ 
+ #about p {
+    font-family: 'Inter', sans-serif;
+ }
+
+ #go-to-game {
+    margin-bottom: 1.5vmin;
+    width: 30vmin;
+ }
+
+ /* ----- FOOTER ----- */
+
+footer {
+    position: absolute;
+    bottom: 2vmin;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vmin;
+ }
+ 
+ footer a {
+    font-family: 'Tektur', sans-serif;
+    color: rgb(161, 249, 127);
+    text-decoration: none;
+ }
