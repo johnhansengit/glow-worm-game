@@ -139,6 +139,11 @@ button {
       cursor: pointer;
       transform: translate(0%, 5%);
    }
+
+   #logo {
+      height: 15vmin;
+      width: 15vmin;
+   }
    
    button {
       font-size: 3vmin;

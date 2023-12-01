@@ -29,9 +29,10 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
   - [ ] Center content in main columns (desktop mode)
   - [ ] Center hamburger icon
 
-- [ ] Debug worm tail on start/in glow area
+- [ ] Debug worm tail on start
 
 - [ ] Implement player name and leaderboard
+- [ ] Implement error handling
 
 #### **_Credits_**
 

@@ -30,6 +30,12 @@
    gap: 10vmin;
 }
 
+/* ----- LEFT CONTENT (DESKTOP) ----- */
+
+#instructions-container {
+   display: none;
+}
+
 /* ----- STATS ----- */
 
 #level-container {
@@ -233,14 +239,6 @@ button:active,
       margin-top: 7vmin;
    }
 
-   /* #game-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-   } */
-
    .message-container {
       position: absolute;
       top: 50%;
@@ -248,6 +246,29 @@ button:active,
       transform: translate(-68.5%, -25%);
       width: 40vw;
       font-size: 3vmin;
+   }
+
+   #instructions-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      border-radius: 2vmin;
+      background-color: #ddd;
+      padding: 2vmin;
+      text-align: center;
+      color: #323232;
+   }
+
+   #instructions-container > img {
+      width: 80%;
+   }
+
+   #instructions-container p {
+      text-align: justify;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5vmin;
    }
 
    #level-container {

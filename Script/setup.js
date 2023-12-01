@@ -24,6 +24,10 @@ const actions = {
     'ArrowRight': { action: () => changeDirection(D.right), buttonId: 'arrow-right' },
     'ArrowDown': { action: () => changeDirection(D.down), buttonId: 'arrow-down' },
     'ArrowLeft': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
+    'w': { action: () => changeDirection(D.up), buttonId: 'arrow-up' },
+    'd': { action: () => changeDirection(D.right), buttonId: 'arrow-right' },
+    's': { action: () => changeDirection(D.down), buttonId: 'arrow-down' },
+    'a': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
 };
 
 // Sound
