@@ -4,10 +4,18 @@ function renderGrid() {
     grid.style.gridTemplateColumns = `repeat(${GRID_SIZE}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${GRID_SIZE}, 1fr)`;
     grid.innerHTML = '';
+
+    // Get computed styles of the grid
+    const gridComputedStyle = window.getComputedStyle(grid);
+    const gridWidth = parseInt(gridComputedStyle.width);
+    const gridHeight = parseInt(gridComputedStyle.height);
+
     for (let y = GRID_SIZE; y >= 1; y--) {
         for (let x = 1; x <= GRID_SIZE; x++) {
             const gridSquare = document.createElement('div');
             gridSquare.id = `x${x}y${y}`;
+            gridSquare.style.width = `${gridWidth / GRID_SIZE}px`;
+            gridSquare.style.height = `${gridHeight / GRID_SIZE}px`;
             grid.appendChild(gridSquare);
         }
     }

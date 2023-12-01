@@ -101,8 +101,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   width: calc(80vmin/30);
-   height: calc(80vmin/30);
    background-color: #111;
    color: #111;
    font-size: 4vmin;
@@ -272,11 +270,6 @@ button:active,
    #grid {
       width: 65vmin;
       height: 65vmin;
-   }
-
-   #grid>div {
-      width: calc(65vmin/30);
-      height: calc(65vmin/30);
    }
 
    footer {

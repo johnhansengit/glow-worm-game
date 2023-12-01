@@ -21,6 +21,8 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
+- [ ] Create instructions/food info content
+
 - [ ] Responsive Design
   - [ ] Expand whitespace on mobile
   - [ ] Create tablet version
