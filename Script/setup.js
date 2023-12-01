@@ -77,7 +77,8 @@ const grid = document.getElementById('grid');
 
 // Message Containers
 const startCont = document.getElementById('start-game-container');
-const restartCont = document.getElementById('restart-game-container')
+const restartCont = document.getElementById('restart-game-container');
+const foodTable = document.getElementById('food-table');
 
 // Buttons
 const startBtn = document.getElementById('start-btn');
@@ -173,10 +174,20 @@ const dimmer = new GlowFood('Dimmer', 'dimmer-food', 'FoodIcons/dimmer.svg', 20,
 const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, -1);
 const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, 1);
 
-foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];
+foods = [smallFood, largeFood, brighter, dimmer, faster, slower, poisonFood];
+
+// Make food table
+function makeFoodTable() {
+    foods.forEach((food) => {
+        let foodEntry = document.createElement('div');
+        foodEntry.innerHTML = `${food.name} ${food.icon} points: <strong>${food.points}</strong>`
+        foodTable.appendChild(foodEntry);
+    });
+}
 
 // Initialize Functions
 function init() {
+    makeFoodTable();
     setHighScore(0);
     resetStats();
     renderGrid();

@@ -293,6 +293,21 @@ button:active,
       height: 65vmin;
    }
 
+   #food-table {
+      margin-top: -2vmin;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      column-gap: 3vmin;
+      grid-auto-flow: column;
+      text-align: left;
+   }
+
+   #food-table > div > img {
+      width: 3vmin;
+      transform: translate(0%, 25%);
+   }
+
    footer {
       font-size: 2vmin;
    }

@@ -28,6 +28,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
   - [ ] Create tablet version
   - [ ] Center content in main columns (desktop mode)
   - [ ] Center hamburger icon
+  - [ ] Put food types names, icons, and points in aligned columns
 
 - [ ] Debug worm tail on start
 
