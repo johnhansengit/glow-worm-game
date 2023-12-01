@@ -38,3 +38,9 @@ footer {
     color: rgb(161, 249, 127);
     text-decoration: none;
  }
+
+ @media screen and (min-width: 1000px) {
+   footer {
+      font-size: 2vmin;
+   }
+ }

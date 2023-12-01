@@ -26,6 +26,13 @@ header {
    margin: 2vh auto 0;
 }
 
+#logo-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
 #logo {
    height: 25vmin;
    width: 25vmin;
@@ -131,5 +138,9 @@ button {
       color: rgb(161, 249, 127);
       cursor: pointer;
       transform: translate(0%, 5%);
+   }
+   
+   button {
+      font-size: 3vmin;
    }
 }

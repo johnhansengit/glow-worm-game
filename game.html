@@ -13,10 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Tektur:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <script defer src="Script/gameplay.js"></script>
-        <script defer src="Script/render.js"></script>
-        <script defer src="Script/setup.js"></script>
-        <script defer src="Script/landing.js"></script>
+    <script defer src="Script/gameplay.js"></script>
+    <script defer src="Script/render.js"></script>
+    <script defer src="Script/setup.js"></script>
+    <script defer src="Script/landing.js"></script>
 </head>
 
 <body>
@@ -39,52 +39,61 @@
             </div>
         </nav>
 
-        <a href="index.html" alt="Home"><img id="logo" src="LogoAssets/Glow-Worm-Logo.png" alt="Glow-Worm-Logo"></a>
-        
+
     </header>
 
-    <main>  
-        
-        <section class="message-container" id="start-game-container">
-            <div class="message">
-                <h3>Ready when you are...</h3>
-            </div>
-            <div id="start-btn-container">
-                <button id="start-btn">Start Game</button>
-            </div>
-        </section>
+    <main>
+        <div id="logo-container">
+            <a href="index.html" alt="Home"><img id="logo" src="LogoAssets/Glow-Worm-Logo.png" alt="Glow-Worm-Logo"></a>
+        </div>
 
-        <section class="message-container" id="restart-game-container">
-            <div class="message">
-                <h2>Game Over!</h2>
-            </div>
-            <div id="reset-btns-container">
-                <button id="restart-btn">Try Again</button>
-                <button id="quit-reset-btn">Quit & Reset</button>
-            </div>
-        </section>
-        
-        <section id="level-container">
-            <div id="level">Level: 0</div>
-        </section>
-        <section id="stats-container">
-            <div id="high-score-label">High Score:</div>
-            <div id="high-score-val">000</div>
-            <div id="current-score-label">Current Score:</div>
-            <div id="current-score-val">000</div>
-            <div id="time-label">Time:</div>
-            <div id="time-val">00:00</div>
-        </section>
+        <div id="game-container">
+            <section class="message-container" id="start-game-container">
+                <div class="message">
+                    <h3>Ready when you are...</h3>
+                </div>
+                <div id="start-btn-container">
+                    <button id="start-btn">Start Game</button>
+                </div>
+            </section>
 
-        <section id="grid"></section>
+            <section class="message-container" id="restart-game-container">
+                <div class="message">
+                    <h2>Game Over!</h2>
+                </div>
+                <div id="reset-btns-container">
+                    <button id="restart-btn">Try Again</button>
+                    <button id="quit-reset-btn">Quit & Reset</button>
+                </div>
+            </section>
 
-        <section id="controls-container">
-            <button id="arrow-up">Up</button>
-            <button id="arrow-left">Left</button>
-            <button id="pause">Pause</button>
-            <button id="arrow-right">Right</button>
-            <button id="arrow-down">Down</button>
-        </section>
+            <section id="level-container">
+                <div id="level">Level: 0</div>
+            </section>
+
+            <section id="stats-container">
+
+                <div id="high-score-label">High Score:</div>
+                <div id="high-score-val">000</div>
+
+                <div id="current-score-label">Current Score:</div>
+                <div id="current-score-val">000</div>
+
+                <div id="time-label">Time:</div>
+                <div id="time-val">00:00</div>
+
+            </section>
+
+            <section id="grid"></section>
+
+            <section id="controls-container">
+                <button id="arrow-up">Up</button>
+                <button id="arrow-left">Left</button>
+                <button id="pause">Pause</button>
+                <button id="arrow-right">Right</button>
+                <button id="arrow-down">Down</button>
+            </section>
+        </div>
 
     </main>
 
@@ -93,7 +102,8 @@
             a <a href="https://johnhansen.io/" alt="johnhansen.io" target="_blank">john hansen</a> creation © 2023
         </div>
         <div>
-            music by <a href="https://www.chosic.com/download-audio/31959/" alt="chosic.com" target="_blank">alex productions</a>
+            music by <a href="https://www.chosic.com/download-audio/31959/" alt="chosic.com" target="_blank">alex
+                productions</a>
         </div>
     </footer>
 

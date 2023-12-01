@@ -44,9 +44,9 @@
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-   grid-template-areas: 
-       "high-score-label current-score-label timer-label"
-       "high-score current-score timer";
+   grid-template-areas:
+      "high-score-label current-score-label timer-label"
+      "high-score current-score timer";
    justify-content: center;
    align-items: center;
    place-items: center;
@@ -67,17 +67,19 @@
    grid-area: timer-label;
 }
 
-#high-score-val, #current-score-val, #time-val {
+#high-score-val,
+#current-score-val,
+#time-val {
    font-size: 4.5vmin;
 }
 
 #high-score-val {
    grid-area: high-score;
-}    
+}
 
 #current-score-val {
    grid-area: current-score;
-}    
+}
 
 #time-val {
    grid-area: timer;
@@ -87,7 +89,7 @@
 
 #grid {
    display: grid;
-   width: 80vmin; 
+   width: 80vmin;
    height: 80vmin;
    justify-content: center;
    align-items: stretch;
@@ -95,7 +97,7 @@
    overflow: hidden;
 }
 
-#grid > div {
+#grid>div {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -109,7 +111,7 @@
 
 /* ----- FOOD ICONS ----- */
 
-#grid > div > img {
+#grid>div>img {
    width: 7vmin;
    height: 7vmin;
 }
@@ -118,20 +120,20 @@
 
 .worm-head {
    background-color: rgb(161, 249, 127) !important;
-   box-shadow: 0 0 15vmin 8vmin rgba(161, 249, 127, 0.5); 
-   z-index: 2; 
+   box-shadow: 0 0 15vmin 8vmin rgba(161, 249, 127, 0.5);
+   z-index: 2;
 }
 
 .just-ate {
    background-color: white !important;
-   box-shadow: 0 0 15vmin 8vmin rgba(255, 255, 255, 0.5); 
-   z-index: 2; 
+   box-shadow: 0 0 15vmin 8vmin rgba(255, 255, 255, 0.5);
+   z-index: 2;
 }
 
 .poisoned {
    background-color: rgb(249, 127, 127) !important;
-   box-shadow: 0 0 18vmin 15vmin rgba(249, 127, 127, 0.75); 
-   z-index: 2; 
+   box-shadow: 0 0 18vmin 15vmin rgba(249, 127, 127, 0.75);
+   z-index: 2;
 }
 
 .glow {
@@ -163,7 +165,9 @@ footer a {
 
 /* ----- BUTTONS ----- */
 
-#start-btn, #restart-btn, #quit-reset-btn {
+#start-btn,
+#restart-btn,
+#quit-reset-btn {
    margin-bottom: 1.5vmin;
    width: 30vmin;
 }
@@ -175,10 +179,10 @@ footer a {
    display: grid;
    grid-template-rows: 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 1fr;
-   grid-template-areas: 
-       ". up ."
-       "left center right"
-       ". down .";
+   grid-template-areas:
+      ". up ."
+      "left center right"
+      ". down .";
    row-gap: 1vmin;
    place-items: center;
 }
@@ -194,7 +198,8 @@ footer a {
 #pause {
    grid-area: center;
    height: 7vmin;
-   width: 25vmin;;
+   width: 25vmin;
+   ;
 }
 
 #arrow-right {
@@ -217,4 +222,65 @@ button:active,
    color: rgb(71, 155, 90);
    border: 1px solid #999;
    box-shadow: none;
+}
+
+@media screen and (min-width: 1000px) {
+   #controls-container {
+      display: none;
+   }
+
+   main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 7vmin;
+   }
+
+   /* #game-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+   } */
+
+   .message-container {
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      transform: translate(-68.5%, -25%);
+      width: 40vw;
+      font-size: 3vmin;
+   }
+
+   #level-container {
+      font-size: 4vmin;
+      margin: 1vmin 0 0;
+   }
+
+   #stats-container {
+      font-size: 2.25vmin;
+      margin: 1vmin;
+   }
+
+   #high-score-val,
+   #current-score-val,
+   #time-val {
+      font-size: 3.5vmin;
+      margin: -0.5vmin;
+   }
+
+   #grid {
+      width: 65vmin;
+      height: 65vmin;
+   }
+
+   #grid>div {
+      width: calc(65vmin/30);
+      height: calc(65vmin/30);
+   }
+
+   footer {
+      font-size: 2vmin;
+   }
+
 }
