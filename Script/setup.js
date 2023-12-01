@@ -166,8 +166,8 @@ const largeFood = new Food('Large Food', 'large-food', 'FoodIcons/largeFood.svg'
 const poisonFood = new PoisonFood('Poison!', 'poison-food', 'FoodIcons/poison.svg', -20);
 const brighter = new GlowFood('Brighter', 'brighter-food', 'FoodIcons/brighter.svg', 0, 1);
 const dimmer = new GlowFood('Dimmer', 'dimmer-food', 'FoodIcons/dimmer.svg', 20, -1);
-const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, 1);
-const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, -1);
+const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, -1);
+const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, 1);
 
 foods = [smallFood, largeFood, poisonFood, brighter, dimmer, faster, slower];
 

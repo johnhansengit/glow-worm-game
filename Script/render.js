@@ -69,9 +69,6 @@ function getAdjacentSquares([x, y]) {
 }
 
 function renderWormTail() {
-    // Clear previous tail classes
-    document.querySelectorAll('.worm-tail').forEach(el => el.classList.remove('worm-tail'));
-
     wormTail.forEach((tailSegId) => {
         let [x, y] = tailSegId;
         let tailSeg = document.getElementById(`x${x}y${y}`);

@@ -86,8 +86,12 @@ function moveWorm() {
 
             // Otherwise, move normally
         } else {
-            // Remove last segment
-            wormTail.pop();
+            // Remove and de-class last segment
+            let lastSegId = wormTail.pop();
+            let lastx = lastSegId[0];
+            let lasty = lastSegId[1];
+            let lastSeg = document.getElementById(`x${lastx}y${lasty}`)
+            lastSeg.classList.remove('worm-tail');
 
             // Add new segment at current head position (before moving the head)
             wormTail.unshift([...wormHeadCoords]);
