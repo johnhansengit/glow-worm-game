@@ -49,19 +49,19 @@ header {
    right: 3vmin;
    height: 15vmin;
    width: 15vmin;
+   padding-bottom: 1.75vmin;
    background-color: #414141;
    color: #ddd;
    font-size: 10vmin;
 }
 
 #hamburger-nav-links {
-   visibility: hidden;
    opacity: 0;
    flex-direction: column;
    position: absolute;
    top: 7.75vh;
    right: 4vmin;
-   transition: opacity 0.25s ease, visibility 0.25s;
+   transition: opacity 0.25s ease;
 }
 
 #hamburger-nav-links a {
@@ -94,6 +94,17 @@ button {
    font-family: 'Tektur', sans-serif;
    font-weight: 500;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.541);
+}
+
+button:active {
+   background-color: rgb(161, 249, 127);
+   color: rgb(71, 155, 90);
+   border: 1px solid #999;
+   box-shadow: none;
+}
+
+button:hover {
+   cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {

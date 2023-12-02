@@ -1,3 +1,8 @@
+main {
+   opacity: 0;
+   transition: opacity 0.5s ease;
+}
+
 /* ----- MESSAGE CONTAINERS ----- */
 
 .message-container {
@@ -158,6 +163,8 @@ footer {
    bottom: 2vmin;
    font-family: 'Inter', sans-serif;
    font-size: 3vmin;
+   opacity: 0;
+   transition: opacity 0.5s ease;
 }
 
 footer a {
@@ -215,11 +222,6 @@ footer a {
 
 /* On Click */
 
-button:active,
-#arrow-up:active,
-#arrow-left:active,
-#arrow-right:active,
-#arrow-down:active,
 .button-clicked {
    background-color: rgb(161, 249, 127);
    color: rgb(71, 155, 90);

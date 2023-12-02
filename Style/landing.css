@@ -15,6 +15,14 @@
    font-size: 3vmin;
 }
 
+main {
+   transition: opacity 0.5s ease;
+}
+
+#logo {
+   transition: opacity 0.5s ease;
+}
+
 #about h2 {
    margin-top: 0vmin;
 }
@@ -59,6 +67,7 @@ footer {
    bottom: 2vmin;
    font-family: 'Inter', sans-serif;
    font-size: 3vmin;
+   transition: opacity 0.5s ease;
 }
 
 footer a {
