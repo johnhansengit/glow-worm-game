@@ -25,10 +25,11 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 - [ ] Responsive Design
   - [ ] Expand whitespace on mobile
-  - [ ] Create tablet version
-  - [ ] Center content in main columns (desktop mode)
+  - [ ] Center content horizontally in main columns (desktop mode)
   - [ ] Center hamburger icon
+  - [ ] Add functionality to Go to Game button, such that it fades out 'Get Ready' content before going to new page
   - [ ] Put food types names, icons, and points in aligned columns
+  - [ ] Create tablet version?
 
 - [ ] Debug worm tail on start
 

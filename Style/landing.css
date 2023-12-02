@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 3vmin;
-    height: 70vh;
+    height: auto;
     width: 80vw;
     border: 1px solid #ddd;
     border-radius: 1.5vmin;
@@ -14,6 +14,11 @@
     box-shadow: 0 0 5vmin 1vmin rgba(161, 249, 127, 0.5);
     font-size: 3vmin;
  }
+
+ #about h2 {
+   margin-top: 0vmin;
+}
+
  #about h3 {
    text-align: center;
  }
@@ -23,7 +28,7 @@
  }
 
  #food-table {
-   margin-top: -2vmin;
+   margin: -2vmin 2vmin 5vmin;
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -43,7 +48,7 @@
 }
 
  #go-to-game {
-    margin-bottom: 1.5vmin;
+    margin: 1.5vmin;
     width: 30vmin;
  }
 
@@ -63,6 +68,22 @@ footer {
  }
 
  @media screen and (min-width: 1000px) {
+   #logo {
+      margin-top: 7vmin;
+      width: 25vmin;
+      height: 25vmin;
+   }
+
+   
+
+   #landing-content p {
+      font-size: 2.5vmin;
+   }
+
+   #food-info {
+      display: none;
+   }
+
    footer {
       font-size: 2vmin;
    }

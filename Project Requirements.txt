@@ -2,12 +2,8 @@ Project Requirements (MVP)
 Project Completed Due Date: 12/6/23 by 10:00 AM EST
 
 
-
-*** IN PROGRESS ***
-- Include a beautiful, professional README.md (use markdown)
-
-
 *** FINAL CHECKS ***
+- Include a beautiful, professional README.md (use markdown)
 - Be deployed on Surge (We will cover this on Monday of project week)
 - Remove console logs before deploying
 - Display proper use of global variables and function parameters (function scopes)

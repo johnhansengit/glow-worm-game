@@ -179,7 +179,7 @@ footer a {
 /* Controls */
 
 #controls-container {
-   margin-top: 3vmin;
+   margin-top: 5vmin;
    display: grid;
    grid-template-rows: 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 1fr;

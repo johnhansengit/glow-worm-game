@@ -59,7 +59,7 @@ header {
    opacity: 0;
    flex-direction: column;
    position: absolute;
-   top: 9vh;
+   top: 7.5vh;
    right: 4vmin;
    transition: opacity 0.25s ease, visibility 0.25s;
 }

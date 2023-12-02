@@ -59,7 +59,7 @@ const foodTable = document.getElementById('food-table');
 function makeFoodTable() {
     foods.forEach((food) => {
         let foodEntry = document.createElement('div');
-        foodEntry.innerHTML = `${food.name} ${food.icon} points: <strong>${food.points}</strong>`
+        foodEntry.innerHTML = `${food.name} ${food.icon} pts: <strong>${food.points}</strong>`
         foodTable.appendChild(foodEntry);
     });
 }
