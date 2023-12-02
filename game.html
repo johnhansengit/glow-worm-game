@@ -59,24 +59,26 @@
         </div>
         
         <div id="game-container">
-            <section class="message-container" id="start-game-container">
-                <div class="message">
-                    <h3>Ready when you are...</h3>
-                </div>
-                <div id="start-btn-container">
-                    <button id="start-btn">Start Game</button>
-                </div>
-            </section>
-
-            <section class="message-container" id="restart-game-container">
-                <div class="message">
-                    <h2>Game Over!</h2>
-                </div>
-                <div id="reset-btns-container">
-                    <button id="restart-btn">Try Again</button>
-                    <button id="quit-reset-btn">Quit & Reset</button>
-                </div>
-            </section>
+            <div id="overlay-container">
+                <section class="message-container" id="start-game-container">
+                    <div class="message">
+                        <h2>Ready when you are...</h2>
+                    </div>
+                    <div id="start-btn-container">
+                        <button id="start-btn">Start Game</button>
+                    </div>
+                </section>
+    
+                <section class="message-container" id="restart-game-container">
+                    <div class="message">
+                        <h2>Game Over!</h2>
+                    </div>
+                    <div id="reset-btns-container">
+                        <button id="restart-btn">Try Again</button>
+                        <button id="quit-reset-btn">Quit & Reset</button>
+                    </div>
+                </section>
+            </div>
 
             <section id="level-container">
                 <div id="level">Level: 0</div>
