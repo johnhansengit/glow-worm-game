@@ -38,6 +38,9 @@ const eatSound = new Audio('Sound/eat-sound.mp3')
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
+let gameIsInPlay;
+let startScreen;
+
 // Player
 let playerName;
 
@@ -116,9 +119,19 @@ quitBtn.addEventListener('click', function () {
     init();
 });
 
-// Event listener for keyboard
+// Event listeners for keyboard
 document.addEventListener('keydown', function (event) {
-    handleInput(event.key);
+    if (gameIsInPlay) {
+        event.preventDefault();
+        handleInput(event.key);
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (startScreen && event.key === 'Enter') {
+        event.preventDefault();
+        startGame();
+    }
 });
 
 // Event listeners for mouse
@@ -137,6 +150,8 @@ function fadeInPage() {
 }
 
 function init() {
+    gameIsInPlay = false;
+    startScreen = true;
     setHighScore(0);
     resetStats();
     renderGrid();

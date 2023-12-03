@@ -30,6 +30,8 @@ function startGame() {
     leaderboardEl.innerHTML = '<tr><th>Rank</th><th>Player</th><th>Level</th><th>Time</th><th>Score</th></tr>';
     startCont.style.display = 'none';
     restartCont.style.display = 'none';
+    gameIsInPlay = true;
+    startScreen = false;
     numOfFood = STARTING_NUM_OF_FOOD;
     resetStats();
     initWorm();
@@ -173,7 +175,16 @@ function updateLeaderBoard(player, level, time, score) {
 }
 
 function displayLeaderBoard() {
-    leaderBoardScores.sort((a, b) => b.score - a.score);
+    leaderBoardScores.sort((a, b) => {
+        // First, sort by score
+        let scoreDifference = b.score - a.score;
+        if (scoreDifference !== 0) {
+            return scoreDifference;
+        }
+
+        // If scores are the same, sort by time (longer time higher)
+        return b.time - a.time;
+    });
     
     let topTen = leaderBoardScores.slice(0,10);
 
@@ -222,6 +233,7 @@ function resetMoveInterval() {
 }
 
 function gameOver() {
+    gameIsInPlay = false;
     clearInterval(moveInterval);
     clearInterval(timerInterval);
     backgroundMusic.pause();

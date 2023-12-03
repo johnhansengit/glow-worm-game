@@ -23,6 +23,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 #### **_Future Updates_**
 
 BUGS
+- [ ] Leadboard shows current high-score rather than current score
 - [ ] Debug hamburger menu on game page
 - [ ] Debug worm tail on start
 
@@ -31,7 +32,6 @@ DESIGN
 - [ ] Responsive design: tablet
 - [ ] Fade-in content on landing page
 - [ ] Limit player name inputs (one word, str length, etc., handle what happens if no player name entered)
-- [ ] Allow 'enter' to submit player name and start game
 
 MISC
 - [ ] Implement error handling
