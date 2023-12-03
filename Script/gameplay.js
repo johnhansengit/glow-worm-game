@@ -27,6 +27,7 @@ function resetTimer() {
 
 function startGame() {
     playerName = document.getElementById('player-name').value;
+    leaderboardEl.innerHTML = '<tr><th>Rank</th><th>Player</th><th>Level</th><th>Time</th><th>Score</th></tr>';
     startCont.style.display = 'none';
     restartCont.style.display = 'none';
     numOfFood = STARTING_NUM_OF_FOOD;
@@ -51,7 +52,8 @@ function runTimer() {
 }
 
 function formatTime(min, sec) {
-    return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    timeNow = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    return timeNow;
 }
 
 /*------------------------- GAME PLAY -------------------------*/
@@ -164,9 +166,9 @@ function updateHighScore() {
     highScoreEl.innerText = highScore;
 }
 
-function updateLeaderBoard(player, score) {
+function updateLeaderBoard(player, level, time, score) {
     leaderBoardScores = JSON.parse(localStorage.getItem('leaderboard')) || [];
-    leaderBoardScores.push({player, score});
+    leaderBoardScores.push({player, level, time, score});
     localStorage.setItem('leaderboard', JSON.stringify(leaderBoardScores));
 }
 
@@ -178,12 +180,23 @@ function displayLeaderBoard() {
     let latestScores = document.querySelectorAll('.latest-score');
     latestScores.forEach(el => el.classList.remove('latest-score'));
 
+    let isLatestScoreAssigned = false;
+
     topTen.forEach((score, idx) => {
-        let scoreDisplay = document.createElement('div')
-        scoreDisplay.innerHTML = `${idx + 1}. ${score.player}: ${score.score}`;
-        if (score.score == highScore) {
+        let scoreDisplay = document.createElement('tr')
+
+        scoreDisplay.innerHTML = 
+            `<td>${idx + 1}.</td>
+            <td>${score.player}</td>
+            <td>lv. ${score.level}</td>
+            <td>${score.time}</td>
+            <td>${score.score}</td>`;
+
+        if (score.score == highScore && !isLatestScoreAssigned) {
             scoreDisplay.className = 'latest-score';
+            isLatestScoreAssigned = true;
         }
+
         leaderboardEl.appendChild(scoreDisplay);
     });
 }
@@ -212,9 +225,9 @@ function gameOver() {
     clearInterval(moveInterval);
     clearInterval(timerInterval);
     backgroundMusic.pause();
+    updateLeaderBoard(playerName, level, timeNow, highScore);
     backgroundMusic.currentTime = 0;
     renderGrid();
-    updateLeaderBoard(playerName, highScore);
     displayLeaderBoard();
     restartCont.style.display = 'flex';
 }

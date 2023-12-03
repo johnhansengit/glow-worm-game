@@ -48,6 +48,7 @@ let highScore;
 let currentScore;
 let time;
 let timerInterval;
+let timeNow;
 
 // Worm
 let wormHeadCoords;

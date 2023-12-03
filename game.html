@@ -13,11 +13,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Tektur:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <script defer src="Script/gameplay.js"></script>
-        <script defer src="Script/render.js"></script>
-        <script defer src="Script/foods.js"></script>
-        <script defer src="Script/setup.js"></script>
-        <script defer src="Script/landing.js"></script>
+    <script defer src="Script/gameplay.js"></script>
+    <script defer src="Script/render.js"></script>
+    <script defer src="Script/foods.js"></script>
+    <script defer src="Script/setup.js"></script>
+    <script defer src="Script/landing.js"></script>
 </head>
 
 <body>
@@ -46,18 +46,21 @@
     <main>
         <div id="left-content-container">
             <div id="logo-container">
-                <a href="index.html" alt="Home"><img id="logo" src="LogoAssets/Glow-Worm-Logo.png" alt="Glow-Worm-Logo"></a>
+                <a href="index.html" alt="Home"><img id="logo" src="LogoAssets/Glow-Worm-Logo.png"
+                        alt="Glow-Worm-Logo"></a>
             </div>
             <div id="instructions-container">
                 <h3>Game Controls</h3>
                 <img src="LogoAssets/Directional Keys.png" alt="Directional Keys">
-                <p>Use either the <strong>WASD</strong> keys (left-handed play) or the <strong>arrow keys</strong> (right-handed play) on your keyboard to move. Press <strong>spacebar</strong> to pause and unpause the game.</p>
+                <p>Use either the <strong>WASD</strong> keys (left-handed play) or the <strong>arrow keys</strong>
+                    (right-handed play) on your keyboard to move. Press <strong>spacebar</strong> to pause and unpause
+                    the game.</p>
                 <h3>Food Types</h3>
                 <div id="food-table"></div>
             </div>
 
         </div>
-        
+
         <div id="game-container">
             <div id="overlay-container">
                 <section class="message-container" id="start-game-container">
@@ -69,14 +72,14 @@
                         <button id="start-btn">Start Game</button>
                     </div>
                 </section>
-    
+
                 <section class="message-container" id="restart-game-container">
                     <div class="message">
                         <h2>Game Over!</h2>
-                    </div>
-                    <div id="leaderboard">
+                        <hr>
                         <h3>Leaderboard</h3>
                     </div>
+                    <table id="leaderboard"></table>
                     <div id="reset-btns-container">
                         <button id="restart-btn">Try Again</button>
                         <button id="quit-reset-btn">Quit & Reset</button>

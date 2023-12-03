@@ -44,6 +44,7 @@ input {
 
 #leaderboard {
    margin-bottom: 3vmin;
+   width: 100%;
 }
 
 .latest-score {
