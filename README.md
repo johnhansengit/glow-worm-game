@@ -14,6 +14,7 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 - HTML
 - CSS
 - JavaScript
+- JSON
 
 #### **_Wireframe_**
 
@@ -21,14 +22,20 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
+BUGS
+- [ ] Reset leaderboard innerHTML on Try Again so that it doesn't display multiple leaderboards (create new div just for leaderboard h3, or move it up to game over div)
 - [ ] Debug hamburger menu on game page
-
-- [ ] Make food types names, icons, and points into table (align columns)
-- [ ] Put leaderboard into table (align columns) and add time value
-- [ ] Responsive design: tablet
-
 - [ ] Debug worm tail on start
 
+DESIGN
+- [ ] Make food types names, icons, and points into table (align columns)
+- [ ] Put leaderboard into table (align columns) and add time value and level
+- [ ] Responsive design: tablet
+- [ ] Fade-in content on landing page
+- [ ] Limit player name inputs (one word, str length, etc., handle what happens if no player name entered)
+- [ ] Allow 'enter' to submit player name and start game
+
+MISC
 - [ ] Implement error handling
 
 #### **_Credits_**

@@ -175,6 +175,9 @@ function displayLeaderBoard() {
     
     let topTen = leaderBoardScores.slice(0,10);
 
+    let latestScores = document.querySelectorAll('.latest-score');
+    latestScores.forEach(el => el.classList.remove('latest-score'));
+
     topTen.forEach((score, idx) => {
         let scoreDisplay = document.createElement('div')
         scoreDisplay.innerHTML = `${idx + 1}. ${score.player}: ${score.score}`;

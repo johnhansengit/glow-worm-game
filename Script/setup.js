@@ -118,7 +118,6 @@ quitBtn.addEventListener('click', function () {
 // Event listener for keyboard
 document.addEventListener('keydown', function (event) {
     handleInput(event.key);
-    // event.preventDefault();
 });
 
 // Event listeners for mouse
