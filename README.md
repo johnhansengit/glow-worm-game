@@ -23,13 +23,12 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 - [ ] Debug hamburger menu on game page
 
-- [ ] Responsive Design
-  - [ ] Put food types names, icons, and points in aligned columns
-  - [ ] Create tablet version?
+- [ ] Make food types names, icons, and points into table (align columns)
+- [ ] Put leaderboard into table (align columns) and add time value
+- [ ] Responsive design: tablet
 
 - [ ] Debug worm tail on start
 
-- [ ] Implement player name and leaderboard
 - [ ] Implement error handling
 
 #### **_Credits_**

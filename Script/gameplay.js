@@ -26,6 +26,7 @@ function resetTimer() {
 /*------------------------- (RE)START GAME -------------------------*/
 
 function startGame() {
+    playerName = document.getElementById('player-name').value;
     startCont.style.display = 'none';
     restartCont.style.display = 'none';
     numOfFood = STARTING_NUM_OF_FOOD;
@@ -163,6 +164,27 @@ function updateHighScore() {
     highScoreEl.innerText = highScore;
 }
 
+function updateLeaderBoard(player, score) {
+    leaderBoardScores = JSON.parse(localStorage.getItem('leaderboard')) || [];
+    leaderBoardScores.push({player, score});
+    localStorage.setItem('leaderboard', JSON.stringify(leaderBoardScores));
+}
+
+function displayLeaderBoard() {
+    leaderBoardScores.sort((a, b) => b.score - a.score);
+    
+    let topTen = leaderBoardScores.slice(0,10);
+
+    topTen.forEach((score, idx) => {
+        let scoreDisplay = document.createElement('div')
+        scoreDisplay.innerHTML = `${idx + 1}. ${score.player}: ${score.score}`;
+        if (score.score == highScore) {
+            scoreDisplay.className = 'latest-score';
+        }
+        leaderboardEl.appendChild(scoreDisplay);
+    });
+}
+
 function levelUp() {
     level++;
     levelEl.innerHTML = '<span style="color: rgb(161, 249, 127);"><strong>LEVEL UP!</strong></span>';
@@ -189,6 +211,8 @@ function gameOver() {
     backgroundMusic.pause();
     backgroundMusic.currentTime = 0;
     renderGrid();
+    updateLeaderBoard(playerName, highScore);
+    displayLeaderBoard();
     restartCont.style.display = 'flex';
 }
 

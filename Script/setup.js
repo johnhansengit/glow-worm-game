@@ -38,7 +38,11 @@ const eatSound = new Audio('Sound/eat-sound.mp3')
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
+// Player
+let playerName;
+
 // Stats
+let leaderBoardScores;
 let level;
 let highScore;
 let currentScore;
@@ -74,6 +78,7 @@ const levelEl = document.getElementById('level');
 const highScoreEl = document.getElementById('high-score-val');
 const currentScoreEl = document.getElementById('current-score-val');
 const timeEl = document.getElementById('time-val');
+const leaderboardEl = document.getElementById('leaderboard');
 
 // Grid
 const grid = document.getElementById('grid');
@@ -113,7 +118,7 @@ quitBtn.addEventListener('click', function () {
 // Event listener for keyboard
 document.addEventListener('keydown', function (event) {
     handleInput(event.key);
-    event.preventDefault();
+    // event.preventDefault();
 });
 
 // Event listeners for mouse
@@ -126,6 +131,11 @@ document.getElementById('arrow-left').addEventListener('click', () => handleInpu
 /*------------------------- INIT FUNCTIONS -------------------------*/
 
 // Initialize Functions
+function fadeInPage() {
+    main.style.opacity = 1;
+    footer.style.opacity = 1;
+}
+
 function init() {
     setHighScore(0);
     resetStats();
@@ -172,6 +182,5 @@ function randomCoord(condition) {
 
 /*------------------------- INITIALIZE GAME -------------------------*/
 
-main.style.opacity = 1;
-footer.style.opacity = 1;
+fadeInPage();
 init();

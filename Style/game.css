@@ -35,6 +35,21 @@ main {
    gap: 10vmin;
 }
 
+input {
+   font-size: 4vmin;
+   margin-bottom: 4vmin;
+   border-radius: 2vmin;
+   text-align: center;
+}
+
+#leaderboard {
+   margin-bottom: 3vmin;
+}
+
+.latest-score {
+   background-color: rgb(161, 249, 127);
+}
+
 /* ----- LEFT CONTENT (DESKTOP) ----- */
 
 #instructions-container {
@@ -229,6 +244,8 @@ footer a {
    box-shadow: none;
 }
 
+/* ----- DESKTOP ----- */
+
 @media screen and (min-width: 1000px) {
    #controls-container {
       display: none;
@@ -279,6 +296,12 @@ footer a {
 
    .message-container {
       width: 80%;
+   }
+
+   input {
+      font-size: 3vmin;
+      margin-bottom: 3vmin;
+      border-radius: 1vmin;
    }
 
    #instructions-container>h3 {
