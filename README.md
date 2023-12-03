@@ -31,7 +31,6 @@ DESIGN
 - [ ] Make food types names, icons, and points into table (align columns)
 - [ ] Responsive design: tablet
 - [ ] Fade-in content on landing page
-- [ ] Limit player name inputs (one word, str length, etc., handle what happens if no player name entered)
 
 MISC
 - [ ] Implement error handling

@@ -182,11 +182,11 @@ function displayLeaderBoard() {
             return scoreDifference;
         }
 
-        // If scores are the same, sort by time (longer time higher)
+        // If scores are the same, sort by time
         return b.time - a.time;
     });
     
-    let topTen = leaderBoardScores.slice(0,10);
+    let topTen = leaderBoardScores.slice(0,MAX_LEADERBOARD);
 
     let latestScores = document.querySelectorAll('.latest-score');
     latestScores.forEach(el => el.classList.remove('latest-score'));

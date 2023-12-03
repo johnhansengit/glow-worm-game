@@ -2,6 +2,7 @@
 
 const GRID_SIZE = 30;
 const POINTS_FOR_LEVEL_UP = 100;
+const MAX_LEADERBOARD = 10;
 
 // Starting values
 const STARTING_WORM_LENGTH = 7;
