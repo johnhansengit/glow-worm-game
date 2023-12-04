@@ -15,11 +15,8 @@
    font-size: 3vmin;
 }
 
-main {
-   transition: opacity 0.5s ease;
-}
-
-#logo {
+main, footer, #logo {
+   opacity: 0;
    transition: opacity 0.5s ease;
 }
 
@@ -67,7 +64,6 @@ footer {
    bottom: 2vmin;
    font-family: 'Inter', sans-serif;
    font-size: 3vmin;
-   transition: opacity 0.5s ease;
 }
 
 footer a {

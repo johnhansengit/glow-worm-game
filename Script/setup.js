@@ -77,9 +77,9 @@ let points;
 
 /*------------------------- CACHED ELEMENTS -------------------------*/
 
-// Content
-const main = document.querySelector('main');
-const footer = document.querySelector('footer')
+// // Content
+// const main = document.querySelector('main');
+// const footer = document.querySelector('footer')
 
 // Stats
 const levelEl = document.getElementById('level');
@@ -147,11 +147,11 @@ document.getElementById('arrow-left').addEventListener('click', () => handleInpu
 
 /*------------------------- INIT FUNCTIONS -------------------------*/
 
-// Initialize Functions
-function fadeInPage() {
-    main.style.opacity = 1;
-    footer.style.opacity = 1;
-}
+// // Initialize Functions
+// function fadeInPage() {
+//     main.style.opacity = 1;
+//     footer.style.opacity = 1;
+// }
 
 function init() {
     gameIsInPlay = false;
@@ -201,5 +201,7 @@ function randomCoord(condition) {
 
 /*------------------------- INITIALIZE GAME -------------------------*/
 
-fadeInPage();
+// fadeContent();
+main.style.opacity = 1;
+footer.style.opacity = 1;
 init();
