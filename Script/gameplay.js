@@ -177,7 +177,7 @@ function updateLeaderBoard(player, level, time, score) {
 
 function displayLeaderBoard() {
     leaderBoardScores.sort((a, b) => {
-        // First, sort by score
+        // Sort by score
         let scoreDifference = b.score - a.score;
         if (scoreDifference !== 0) {
             return scoreDifference;

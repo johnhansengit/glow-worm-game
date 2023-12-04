@@ -190,7 +190,7 @@ function randomCoord(condition) {
 
 /*------------------------- INITIALIZE PAGE -------------------------*/
 
-// fadeContent();
+// Fade in page content
 main.style.opacity = 1;
 footer.style.opacity = 1;
 
@@ -204,6 +204,6 @@ footer.innerHTML = `<div>
             music by <a href="https://www.chosic.com/download-audio/31959/" alt="chosic.com" target="_blank">alex
                 productions</a>
         </div>`
-        
+
 // Initialize game
 init();

@@ -20,17 +20,17 @@ How long can you survive?
 - JavaScript
 - JSON
 
-#### **_Wireframe_**
+#### **_Original Wireframe_**
 
 <img src="https://johnhansen.io/wp-content/uploads/2023/11/Glow-Worm-Wireframe.drawio.png" alt="Glow Worm Wireframe" width="auto">
 
 #### **_Future Updates_**
 
-FIXES
-- [ ] Look for functions that are only called within other functions (e.g., eatFood), and reduce scope of necessary variables
-
 BUGS
-- [ ] Debug worm tail on start
+- [ ] Debug wormTail on start
+
+GAMEPLAY
+- [ ] Keep track of foods generated, and avoid too many of one kind
 
 DESIGN
 - [ ] Make food types names, icons, and points into table (align columns)
@@ -39,7 +39,7 @@ DESIGN
 
 MISC
 - [ ] Implement error handling
-- [ ] Rework file structure/names
+- [ ] Improve file structure/names
 
 #### **_Credits_**
 

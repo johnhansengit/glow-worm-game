@@ -7,6 +7,7 @@ if (goToGameBtn) {
     });
 }
 
+// Fade-in page content
 logo.style.opacity = 1;
 main.style.opacity = 1;
 footer.style.opacity = 1;
