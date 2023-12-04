@@ -28,6 +28,7 @@ How long can you survive?
 
 BUGS
 - [ ] Debug wormTail on start
+- [ ] Debug button delays on mobile
 
 GAMEPLAY
 - [ ] Keep track of foods generated, and avoid too many of one kind
