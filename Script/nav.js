@@ -33,4 +33,3 @@ document.querySelectorAll('#menu-bar a, #hamburger-nav-links a').forEach(link =>
         fadeOutPageTransition(destination); 
     });
 });
-

@@ -188,9 +188,22 @@ function randomCoord(condition) {
 }
 
 
-/*------------------------- INITIALIZE GAME -------------------------*/
+/*------------------------- INITIALIZE PAGE -------------------------*/
 
 // fadeContent();
 main.style.opacity = 1;
 footer.style.opacity = 1;
+
+// Automatic year update in footer
+const thisYear = new Date().getFullYear()
+
+footer.innerHTML = `<div>
+            a <a href="https://johnhansen.io/" alt="johnhansen.io" target="_blank">john hansen</a> creation © ${thisYear}
+        </div>
+        <div>
+            music by <a href="https://www.chosic.com/download-audio/31959/" alt="chosic.com" target="_blank">alex
+                productions</a>
+        </div>`
+        
+// Initialize game
 init();
