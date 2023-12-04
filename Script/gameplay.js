@@ -243,7 +243,7 @@ function gameOver() {
     clearInterval(timerInterval);
     playSoundEffect(gameOverSound, 0, 2000);
     backgroundMusic.pause();
-    updateLeaderBoard(playerName, level, timeNow, highScore);
+    updateLeaderBoard(playerName, level, timeNow, currentScore);
     backgroundMusic.currentTime = 0;
     renderGrid();
     displayLeaderBoard();

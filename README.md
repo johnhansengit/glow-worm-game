@@ -8,7 +8,11 @@
 #### **_Description_**
 Glow Worm is a classic snake game... in the dark! It is meant to add several degrees of challenge to the classic snake game -- both for the player, and for the coder. 
 
-Navigate your worm through the grid, looking for food by the glow of your worm's head. Gain points and add length to your tail with every morsel eaten, and feel the speed of the game rachet up with every level conquered. Be careful, though -- there are different types of food. Some is worth more points than others. Some food is poison, and will deduct points from your score. Some increases your glow or speed, while other food decreases it. Two more foods generate for every food eaten, so soon the board is full of obstacles and treats alike. How long can you survive?
+Navigate your worm through the grid, looking for food by the glow of your worm's head. Gain points and add length to your tail with every morsel eaten, and feel the speed of the game rachet up with every level conquered. 
+
+Be careful, though -- there are different types of food. Some is worth more points than others. Some food is poison, and will deduct points from your score. Some increases your glow or speed, while other food decreases it. Two more foods generate for every food eaten, so soon the board is full of obstacles and treats alike. 
+
+How long can you survive?
 
 #### **_Technologies_**
 - HTML
@@ -22,11 +26,14 @@ Navigate your worm through the grid, looking for food by the glow of your worm's
 
 #### **_Future Updates_**
 
-BUGS
+FIXES
 - [ ] Leadboard shows current high-score rather than current score
+- [ ] Move renderGrid to gameStart and color grid container background, to resolve dynamic resize issue
+- [ ] Look for functions that are only called within other functions (e.g., eatFood), and reduce scope of necessary variables
+
+BUGS
 - [ ] Debug hamburger menu on game page
 - [ ] Debug worm tail on start
-- [ ] Move renderGrid to gameStart and color grid container background, to resolve dynamic resize issue
 
 DESIGN
 - [ ] Make food types names, icons, and points into table (align columns)
@@ -36,7 +43,7 @@ DESIGN
 
 MISC
 - [ ] Implement error handling
-- [ ] Rework file structure
+- [ ] Rework file structure/names
 
 #### **_Credits_**
 
