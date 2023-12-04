@@ -3,9 +3,10 @@
 function renderGrid() {
     grid.style.gridTemplateColumns = `repeat(${GRID_SIZE}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${GRID_SIZE}, 1fr)`;
+    grid.style.backgroundColor = '#323232';
     grid.innerHTML = '';
 
-    // Get computed styles of the grid
+    // Get computed dimensions of the grid
     const gridComputedStyle = window.getComputedStyle(grid);
     const gridWidth = parseInt(gridComputedStyle.width);
     const gridHeight = parseInt(gridComputedStyle.height);

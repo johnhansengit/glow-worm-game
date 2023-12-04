@@ -34,6 +34,7 @@ function startGame() {
     startScreen = false;
     numOfFood = STARTING_NUM_OF_FOOD;
     resetStats();
+    renderGrid();
     initWorm();
     renderWorm();
     renderFood();

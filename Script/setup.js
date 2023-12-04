@@ -156,9 +156,9 @@ function fadeInPage() {
 function init() {
     gameIsInPlay = false;
     startScreen = true;
+    grid.style.backgroundColor = '#111';
     setHighScore(0);
     resetStats();
-    renderGrid();
     startCont.style.display = 'flex';
 }
 

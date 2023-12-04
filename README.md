@@ -27,9 +27,8 @@ How long can you survive?
 #### **_Future Updates_**
 
 FIXES
-- [ ] Leadboard shows current high-score rather than current score
-- [ ] Move renderGrid to gameStart and color grid container background, to resolve dynamic resize issue
 - [ ] Look for functions that are only called within other functions (e.g., eatFood), and reduce scope of necessary variables
+- [ ] Main and footer are declared twice -- set up a Context.js file
 
 BUGS
 - [ ] Debug hamburger menu on game page
