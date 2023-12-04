@@ -111,7 +111,7 @@ function moveWorm() {
 }
 
 function eatFood() {
-    playSoundEffect(eatSound);
+    playSoundEffect(eatSound, 2.4, 500);
     let foodEaten = document.getElementById(newWormId);
     let foodEatenClasses = [...foodEaten.classList];
 
@@ -143,13 +143,13 @@ function eatFood() {
     }, 750);
 }
 
-function playSoundEffect(soundEffect) {
-    soundEffect.currentTime = 2.4;
+function playSoundEffect(soundEffect, atTime, timeOut) {
+    soundEffect.currentTime = atTime;
     soundEffect.play();
     setTimeout(function () {
         soundEffect.pause();
-        soundEffect.currentTime = 2.4;
-    }, 500);
+        soundEffect.currentTime = atTime;
+    }, timeOut);
 }
 
 function updateCurrentScore() {
@@ -212,9 +212,14 @@ function displayLeaderBoard() {
     });
 }
 
+function resetLeaderboard() {
+    localStorage.removeItem('leaderboard');
+}
+
 function levelUp() {
     level++;
     levelEl.innerHTML = '<span style="color: rgb(161, 249, 127);"><strong>LEVEL UP!</strong></span>';
+    playSoundEffect(levelUpSound, 0, 500);
     let newSpeedInc = STARTING_SPEED_CHANGE_INCREMENT * Math.pow(0.8, level - 1);
     adjustWormSpeed(wormSpeed - newSpeedInc);
     setTimeout(function updateLevel() {
@@ -236,6 +241,7 @@ function gameOver() {
     gameIsInPlay = false;
     clearInterval(moveInterval);
     clearInterval(timerInterval);
+    playSoundEffect(gameOverSound, 0, 2000);
     backgroundMusic.pause();
     updateLeaderBoard(playerName, level, timeNow, highScore);
     backgroundMusic.currentTime = 0;

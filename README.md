@@ -26,14 +26,17 @@ BUGS
 - [ ] Leadboard shows current high-score rather than current score
 - [ ] Debug hamburger menu on game page
 - [ ] Debug worm tail on start
+- [ ] Move renderGrid to gameStart and color grid container background, to resolve dynamic resize issue
 
 DESIGN
 - [ ] Make food types names, icons, and points into table (align columns)
 - [ ] Responsive design: tablet
 - [ ] Fade-in content on landing page
+- [ ] Change hamburger to X overlay
 
 MISC
 - [ ] Implement error handling
+- [ ] Rework file structure
 
 #### **_Credits_**
 
@@ -41,8 +44,8 @@ MISC
 - Normalize CSS: [Normalize.css](https://cdnjs.com/libraries/normalize)
 - Fonts: [Google Fonts](fonts.google.com)
 - Food icons: [SVGRepo](svgrepo.com)
-- Game control image: [Samuel Burn](http://sburngdl.weebly.com/rules-of-game.html)
-- Eat Sound Effect: [Chosic](https://www.chosic.com/free-music/all/)
+- Directional controls image: [Samuel Burn](http://sburngdl.weebly.com/rules-of-game.html)
+- Sound Effects: [Chosic](https://www.chosic.com/free-music/all/), [mixkit](https://mixkit.co/)
 - Background music: 
 
     Powerful Trap Beat | Strong by Alex-Productions | https://onsound.eu/

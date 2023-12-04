@@ -31,11 +31,14 @@ const actions = {
     'a': { action: () => changeDirection(D.left), buttonId: 'arrow-left' },
 };
 
-// Sound
+// Background Music
 const backgroundMusic = new Audio('Sound/background-music.mp3');
 backgroundMusic.loop = true;
 
+// Sound Effects
 const eatSound = new Audio('Sound/eat-sound.mp3')
+const levelUpSound = new Audio('Sound/level-up.wav');
+const gameOverSound = new Audio('Sound/game-over.wav');
 
 /*------------------------- STATE VARIABLES -------------------------*/
 
