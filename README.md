@@ -28,16 +28,13 @@ How long can you survive?
 
 FIXES
 - [ ] Look for functions that are only called within other functions (e.g., eatFood), and reduce scope of necessary variables
-- [ ] Main and footer are declared twice -- set up a Context.js file
 
 BUGS
-- [ ] Debug hamburger menu on game page
 - [ ] Debug worm tail on start
 
 DESIGN
 - [ ] Make food types names, icons, and points into table (align columns)
 - [ ] Responsive design: tablet
-- [ ] Fade-in content on landing page
 - [ ] Change hamburger to X overlay
 
 MISC

@@ -77,10 +77,6 @@ let points;
 
 /*------------------------- CACHED ELEMENTS -------------------------*/
 
-// // Content
-// const main = document.querySelector('main');
-// const footer = document.querySelector('footer')
-
 // Stats
 const levelEl = document.getElementById('level');
 const highScoreEl = document.getElementById('high-score-val');
@@ -94,7 +90,6 @@ const grid = document.getElementById('grid');
 // Message Containers
 const startCont = document.getElementById('start-game-container');
 const restartCont = document.getElementById('restart-game-container');
-// const foodTable = document.getElementById('food-table');
 
 // Buttons
 const startBtn = document.getElementById('start-btn');
@@ -146,12 +141,6 @@ document.getElementById('arrow-down').addEventListener('click', () => handleInpu
 document.getElementById('arrow-left').addEventListener('click', () => handleInput('ArrowLeft'));
 
 /*------------------------- INIT FUNCTIONS -------------------------*/
-
-// // Initialize Functions
-// function fadeInPage() {
-//     main.style.opacity = 1;
-//     footer.style.opacity = 1;
-// }
 
 function init() {
     gameIsInPlay = false;
