@@ -1,11 +1,14 @@
 /*------------------------- MAKE FOODS -------------------------*/
 
 class Food {
+    static allFoods = [];
+    
     constructor(name, className, iconPath, points) {
         this.name = name;
         this.class = className;
         this.icon = `<img src="${iconPath}">`;
         this.points = points;
+        Food.allFoods.push(this); 
     }
     effect() {
         justAte = 'food';
@@ -51,13 +54,12 @@ const dimmer = new GlowFood('Dimmer', 'dimmer-food', 'FoodIcons/dimmer.svg', 20,
 const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, -1);
 const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, 1);
 
-let foods = [smallFood, largeFood, brighter, dimmer, faster, slower, poisonFood];
 
 // Make food table
 const foodTable = document.getElementById('food-table');
 
 function makeFoodTable() {
-    foods.forEach((food) => {
+    Food.allFoods.forEach((food) => {
         let foodEntry = document.createElement('div');
         foodEntry.innerHTML = `${food.name} ${food.icon} pts: <strong>${food.points}</strong>`
         foodTable.appendChild(foodEntry);

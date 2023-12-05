@@ -97,8 +97,8 @@ function renderFood() {
 }
 
 function getRandomFood() {
-    let foodIdx = Math.floor(Math.random() * foods.length);
-    food = foods[foodIdx];
+    let foodIdx = Math.floor(Math.random() * Food.allFoods.length);
+    food = Food.allFoods[foodIdx];
     return food;
 }
 

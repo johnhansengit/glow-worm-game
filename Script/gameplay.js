@@ -116,7 +116,7 @@ function eatFood() {
     let foodEaten = document.getElementById(newWormId);
     let foodEatenClasses = [...foodEaten.classList];
 
-    foods.forEach((food) => {
+    Food.allFoods.forEach((food) => {
         if (foodEatenClasses.includes(food.class)) {
 
             // Update current score
