@@ -1,6 +1,6 @@
 <img src="https://johnhansen.io/wp-content/uploads/2023/11/Glow-Worm-Logo.png" alt="Glow Worm Logo" width="250"/>
 
-# Glow Worm Game
+# Glow Worm Game --> [Play Here!](https://glow-worm-game.surge.sh/)
 ## Date: 11/28/2023
 ### By: John Hansen
 **[GitHub](https://github.com/johnhansengit) | [LinkedIn](https://www.linkedin.com/in/jhansen-software-engineer/)**
