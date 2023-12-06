@@ -54,6 +54,11 @@ const dimmer = new GlowFood('Dimmer', 'dimmer-food', 'FoodIcons/dimmer.svg', 20,
 const faster = new SpeedFood('Faster', 'faster-food', 'FoodIcons/faster.svg', 20, -1);
 const slower = new SpeedFood('Slower', 'slower-food', 'FoodIcons/slower.svg', 0, 1);
 
+const foodClassMap = {
+    food: 'just-ate',
+    poison: 'poisoned',
+    dimmer: 'dimmer'
+};
 
 // Make food table
 const foodTable = document.getElementById('food-table');

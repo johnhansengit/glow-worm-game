@@ -32,15 +32,9 @@ function renderWorm() {
 
 function renderWormHead() {
     wormHead = document.getElementById(`x${wormHeadCoords[0]}y${wormHeadCoords[1]}`);
-    if (justAte === 'food') {
-        wormHead.className = 'just-ate';
-    } else if (justAte === 'poison') {
-        wormHead.className = 'poisoned';
-    } else if (justAte === 'dimmer') {
-        wormHead.className = 'dimmer';
-    } else {
-        wormHead.className = 'worm-head';
-    }
+    
+    wormHead.className = foodClassMap[justAte] || 'worm-head';
+
     renderGlow(wormHeadCoords);
 }
 
