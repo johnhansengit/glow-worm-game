@@ -119,14 +119,10 @@ function eatFood() {
     Food.allFoods.forEach((food) => {
         if (foodEatenClasses.includes(food.class)) {
 
-            // Update current score
             points = food.points;
             updateCurrentScore();
-
-            // Run any food effects
-            if (food.effect) {
-                food.effect();
-            }
+            
+            food.effect();
         }
     })
 
