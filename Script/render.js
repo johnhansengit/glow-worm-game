@@ -36,6 +36,8 @@ function renderWormHead() {
         wormHead.className = 'just-ate';
     } else if (justAte === 'poison') {
         wormHead.className = 'poisoned';
+    } else if (justAte === 'dimmer') {
+        wormHead.className = 'dimmer';
     } else {
         wormHead.className = 'worm-head';
     }

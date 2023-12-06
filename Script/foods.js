@@ -22,7 +22,7 @@ class GlowFood extends Food {
     }
     effect() {
         glowArea += this.glowEffect;
-        justAte = 'food'
+        justAte = this.glowEffect === -1 ? 'dimmer' : 'food';
     }
 }
 

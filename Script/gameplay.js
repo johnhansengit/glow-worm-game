@@ -141,7 +141,7 @@ function eatFood() {
     // Clear justAte
     setTimeout(() => {
         justAte = null;
-    }, 750);
+    }, 1000);
 }
 
 function playSoundEffect(soundEffect, atTime, timeOut) {
